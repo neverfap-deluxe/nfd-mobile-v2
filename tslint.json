@@ -1,0 +1,6 @@
+{
+  "extends": ["@ueno/tslint-config/react-native", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": false
+  }
+}
