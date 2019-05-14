@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class DissolveYourVisualField extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Dissolve Your Visual Field</Text>
-
+ 
+export const DissolveYourVisualField = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Dissolve Your Visual Field</Text>
+        
 
 <Text style={p}>This exercise is designed to help dissolve your ego.</Text>
 
@@ -123,8 +122,7 @@ export default class DissolveYourVisualField extends Component {
 
 <Text style={p}>While you can do this anywhere, I personally find it works best when I have a few minutes alone, where you can really explore this idea uninterupted.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

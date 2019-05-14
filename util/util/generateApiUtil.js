@@ -19,7 +19,7 @@ const saveList = (items, type, number) => {
 };
 
 const generateImportStatements = (items, type) => (
-  items.map(item => `import ${generateProperTitle(item.title)} from '../content/${type}/${generateProperTitle(item.title)}';\n`).join('')
+  items.map(item => `import { ${generateProperTitle(item.title)} } from '../content/${type}/${generateProperTitle(item.title)}';\n`).join('')
 );
 
 const generateScreenStatements = (items) => (

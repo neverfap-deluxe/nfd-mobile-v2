@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { ScrollView, Text } from 'react-native';
 
 import { Container } from '../../emotion/components';
 import { TopBarStack } from '../topbar/TopBarStack';
 
-
-export const AboutPage = ({ componentId }: any) => {
+export const AboutScreen = ({ componentId }: any) => {
   return (
     <ScrollView>
       <Container>

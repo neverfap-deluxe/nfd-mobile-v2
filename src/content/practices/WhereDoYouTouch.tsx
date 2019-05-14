@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class WhereDoYouTouch extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Where Do You Touch?</Text>
-          <Text style={p}><b>Where Do You Touch?</b> is another classic awareness exercise which is designed to help you develop focus and attention.</Text>
+ 
+export const WhereDoYouTouch = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Where Do You Touch?</Text>
+        <Text style={p}><b>Where Do You Touch?</b> is another classic awareness exercise which is designed to help you develop focus and attention.</Text>
 
 <Text style={p}>By &ldquo;classic&rdquo; I mean it&rsquo;s another variation of the tried-and-true &ldquo;pay attention to X thing throughout the day&rdquo; that I&rsquo;m sure you&rsquo;ve seen in abundance on this website.</Text>
 
@@ -75,8 +74,7 @@ export default class WhereDoYouTouch extends Component {
 
 
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

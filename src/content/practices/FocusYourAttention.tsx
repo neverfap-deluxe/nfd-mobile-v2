@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class FocusYourAttention extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Focus Your Attention</Text>
-
+ 
+export const FocusYourAttention = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Focus Your Attention</Text>
+        
 
 <Text style={p}>Learning to focus our attention is an important skill.</Text>
 
@@ -108,8 +107,7 @@ export default class FocusYourAttention extends Component {
 
 
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

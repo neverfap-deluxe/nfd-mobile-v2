@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class WhyYouShouldNeverDependOnYourEmotions extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Why You Should Never Depend On Your Emotions</Text>
-
+ 
+export const WhyYouShouldNeverDependOnYourEmotions = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Why You Should Never Depend On Your Emotions</Text>
+        
 
 <Text style={p}>One thing that porn addicts are more-than familiar with is this concept of hope and despair.</Text>
 
@@ -121,8 +120,7 @@ export default class WhyYouShouldNeverDependOnYourEmotions extends Component {
 
 <Text style={p}>In terms of moving forward, I highly recommend checking out our range of comprehensive NeverFap Practices which are designed to help you regain control over your mind.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

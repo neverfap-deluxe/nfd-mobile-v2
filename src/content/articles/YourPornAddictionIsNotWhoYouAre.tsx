@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class YourPornAddictionIsNotWhoYouAre extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Your Porn Addiction Is Not Who You Are</Text>
-
+ 
+export const YourPornAddictionIsNotWhoYouAre = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Your Porn Addiction Is Not Who You Are</Text>
+        
 
 
 
@@ -124,8 +123,7 @@ export default class YourPornAddictionIsNotWhoYouAre extends Component {
 
 <Text style={p}>Because porn addiction is a process, not a retrospective idea based in any number of infinite possibilities.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

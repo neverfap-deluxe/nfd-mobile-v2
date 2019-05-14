@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class Every30Minutes extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Every 30 Minutes</Text>
-          <Text style={p}>The idea behind this exercise is to help you develop awareness throughout your day on an interval basis.</Text>
+ 
+export const Every30Minutes = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Every 30 Minutes</Text>
+        <Text style={p}>The idea behind this exercise is to help you develop awareness throughout your day on an interval basis.</Text>
 
 <Text style={p}>Essentially, the intention behind <Text style={{fontWeight: "bold"}}>Every 30 Minutes</Text> is to help keep a constant gauge of what you&rsquo;re doing.</Text>
 
@@ -68,8 +67,7 @@ export default class Every30Minutes extends Component {
 
 
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

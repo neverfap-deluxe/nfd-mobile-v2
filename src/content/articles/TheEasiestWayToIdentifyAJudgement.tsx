@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class TheEasiestWayToIdentifyAJudgement extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>The Easiest Way To Identify A Judgement</Text>
-          <Text style={p}>Some people have a hard time identifying the judgements they make on a daily basis.</Text>
+ 
+export const TheEasiestWayToIdentifyAJudgement = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>The Easiest Way To Identify A Judgement</Text>
+        <Text style={p}>Some people have a hard time identifying the judgements they make on a daily basis.</Text>
 
 <Text style={p}>It could be because they judge out of habit and therefore are doing it subsciously without realising it, or perhaps because they&rsquo;re simply unable to recognise a judgement once they&rsquo;ve made one.</Text>
 
@@ -142,8 +141,7 @@ export default class TheEasiestWayToIdentifyAJudgement extends Component {
 
 <Text style={p}>And by using healthy coping mechanisms such as meditation and awareness exercises, we can go a long way towards developing control over our judgements and emotions.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

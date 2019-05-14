@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class IntroductionToTheNeverFapDeluxeGuide extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Introduction To The NeverFap Deluxe Guide</Text>
-
+ 
+export const IntroductionToTheNeverFapDeluxeGuide = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Introduction To The NeverFap Deluxe Guide</Text>
+        
 
 <Text style={p}>Today I’m here to talk to you about porn addiction.</Text>
 
@@ -159,8 +158,7 @@ export default class IntroductionToTheNeverFapDeluxeGuide extends Component {
 
 <Text style={p}>We’re here to understand who we are, what we have to do to change, as well as understand how we can improve as people.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

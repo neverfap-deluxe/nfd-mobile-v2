@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>The Five Principles Of NeverFap As They Relate To My Life</Text>
-
+ 
+export const TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>The Five Principles Of NeverFap As They Relate To My Life</Text>
+        
 
 <Text style={p}>To be quite honest, the five principles are quite arbitrary.</Text>
 
@@ -170,8 +169,7 @@ export default class TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife extends Com
 
 <Text style={p}>If you&rsquo;d like to learn more, I&rsquo;d recommend going over my article The Five Fundamental Principles of NeverFap which does into more details from a theoretical perspective.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class TheUltimateAimOfNeverFapDeluxePractices extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>The Ultimate Aim Of NeverFap Deluxe Practices</Text>
-
+ 
+export const TheUltimateAimOfNeverFapDeluxePractices = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>The Ultimate Aim Of NeverFap Deluxe Practices</Text>
+        
 
 <Text style={p}>NeverFap Deluxe consists of a range of exercises which are designed to help you develop the skills in order to help you overcome porn addiction.</Text>
 
@@ -83,8 +82,7 @@ export default class TheUltimateAimOfNeverFapDeluxePractices extends Component {
 
 <Text style={p}>The aim is to overcome our porn addiction, and there&rsquo;s no better way I know how than through calmness and awareness.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

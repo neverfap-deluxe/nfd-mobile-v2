@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class FocusOnYourFingerAndYourBackground extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Focus On Your Finger And Your Background</Text>
-          <Text style={p}>This is a simple exercise most people can benefit from straight-away without too much effort.</Text>
+ 
+export const FocusOnYourFingerAndYourBackground = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Focus On Your Finger And Your Background</Text>
+        <Text style={p}>This is a simple exercise most people can benefit from straight-away without too much effort.</Text>
 
 <Text style={p}>Certainly, it was one of the first awareness exercises I learnt when I was starting out with my own mental health journey, and it&rsquo;s one that has stuck with me since.</Text>
 
@@ -82,8 +81,7 @@ export default class FocusOnYourFingerAndYourBackground extends Component {
 
 
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

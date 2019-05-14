@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class UseYourOppositeHand extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>Use Your Opposite Hand</Text>
-          <Text style={p}>This exercise is a great way to force yourself out of your comfort zone.</Text>
+ 
+export const UseYourOppositeHand = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>Use Your Opposite Hand</Text>
+        <Text style={p}>This exercise is a great way to force yourself out of your comfort zone.</Text>
 
 <Text style={p}>Essentially, the idea behind this exercise is to force limitation upon ourselves and gauge not only how we respond, but how we can better react inspite of our circumstances.</Text>
 
@@ -80,8 +79,7 @@ export default class UseYourOppositeHand extends Component {
 
 
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

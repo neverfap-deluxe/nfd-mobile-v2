@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class TheEasiestWayToNotTakeOurEmotionsPersonally extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>The Easiest Way To Not Take Our Emotions Personally</Text>
-          <Text style={p}>There are times when our emotions can feel unmanagable.</Text>
+ 
+export const TheEasiestWayToNotTakeOurEmotionsPersonally = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>The Easiest Way To Not Take Our Emotions Personally</Text>
+        <Text style={p}>There are times when our emotions can feel unmanagable.</Text>
 
 <Text style={p}>For example, we may be feeling intensely anxious about a date we have planned for that night, or we may even be feeling trapped and under the pressure to perform well at school or in our jobs.</Text>
 
@@ -162,8 +161,7 @@ export default class TheEasiestWayToNotTakeOurEmotionsPersonally extends Compone
 
 <Text style={p}>As well as remain calm in the face of emotional uncertainty.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

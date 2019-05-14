@@ -3,7 +3,7 @@ import { TouchableOpacity, Text } from 'react-native';
 import { Item, ItemTitle, ItemDate } from '../../emotion/components';
 
 import { generateProperTitle, setRoot, goToURL } from '../util';
-import { ABOUT_SCREEN } from '../../screens/pageScreens';
+import { ABOUT_SCREEN } from '../pageScreens';
 
 // pushNavigation(CONTENT_SCREEN, { contentTitle: properTitle, contentType: contentType })}>
 const ContentListItemText = ({ item, properTitle, contentType }) => (

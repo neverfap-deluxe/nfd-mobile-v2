@@ -1,25 +1,25 @@
 
-  import IsItOkayToOrgasmIfYouHaveAPornAddiction from '../content/articles/IsItOkayToOrgasmIfYouHaveAPornAddiction';
-import WhatIsNeverFap from '../content/articles/WhatIsNeverFap';
-import WhatItFeelsLikeNotToBeAddictedToPorn from '../content/articles/WhatItFeelsLikeNotToBeAddictedToPorn';
-import TheEasiestWayToNotTakeOurEmotionsPersonally from '../content/articles/TheEasiestWayToNotTakeOurEmotionsPersonally';
-import WhyYouShouldNeverDependOnYourEmotions from '../content/articles/WhyYouShouldNeverDependOnYourEmotions';
-import TheUltimateAimOfNeverFapDeluxePractices from '../content/articles/TheUltimateAimOfNeverFapDeluxePractices';
-import TheEasiestWayToIdentifyAJudgement from '../content/articles/TheEasiestWayToIdentifyAJudgement';
-import YourPornAddictionIsNotWhoYouAre from '../content/articles/YourPornAddictionIsNotWhoYouAre';
-import TheNeverFapStateOfMind from '../content/articles/TheNeverFapStateOfMind';
-import CreatingYourFirstNeverFapSchedule from '../content/articles/CreatingYourFirstNeverFapSchedule';
-import YouAlwaysHaveTimeForYourMentalHealth from '../content/articles/YouAlwaysHaveTimeForYourMentalHealth';
-import TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife from '../content/articles/TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife';
-import EverythingIsAChoice from '../content/articles/EverythingIsAChoice';
-import TheImportanceOfMeditationForPornAddiction from '../content/articles/TheImportanceOfMeditationForPornAddiction';
-import PayingTheNeverFapMaintenanceTax from '../content/articles/PayingTheNeverFapMaintenanceTax';
-import WhatMakesNeverFapSoDifferent from '../content/articles/WhatMakesNeverFapSoDifferent';
-import WhyamIAPornAddict from '../content/articles/WhyamIAPornAddict';
-import TheOneRuleOfNeverFap from '../content/articles/TheOneRuleOfNeverFap';
-import TheFiveFundamentalPrinciplesOfNeverFap from '../content/articles/TheFiveFundamentalPrinciplesOfNeverFap';
-import MyPersonalPornRecoveryJourney from '../content/articles/MyPersonalPornRecoveryJourney';
-import IntroductionToTheNeverFapDeluxeGuide from '../content/articles/IntroductionToTheNeverFapDeluxeGuide';
+  import { IsItOkayToOrgasmIfYouHaveAPornAddiction } from '../content/articles/IsItOkayToOrgasmIfYouHaveAPornAddiction';
+import { WhatIsNeverFap } from '../content/articles/WhatIsNeverFap';
+import { WhatItFeelsLikeNotToBeAddictedToPorn } from '../content/articles/WhatItFeelsLikeNotToBeAddictedToPorn';
+import { TheEasiestWayToNotTakeOurEmotionsPersonally } from '../content/articles/TheEasiestWayToNotTakeOurEmotionsPersonally';
+import { WhyYouShouldNeverDependOnYourEmotions } from '../content/articles/WhyYouShouldNeverDependOnYourEmotions';
+import { TheUltimateAimOfNeverFapDeluxePractices } from '../content/articles/TheUltimateAimOfNeverFapDeluxePractices';
+import { TheEasiestWayToIdentifyAJudgement } from '../content/articles/TheEasiestWayToIdentifyAJudgement';
+import { YourPornAddictionIsNotWhoYouAre } from '../content/articles/YourPornAddictionIsNotWhoYouAre';
+import { TheNeverFapStateOfMind } from '../content/articles/TheNeverFapStateOfMind';
+import { CreatingYourFirstNeverFapSchedule } from '../content/articles/CreatingYourFirstNeverFapSchedule';
+import { YouAlwaysHaveTimeForYourMentalHealth } from '../content/articles/YouAlwaysHaveTimeForYourMentalHealth';
+import { TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife } from '../content/articles/TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife';
+import { EverythingIsAChoice } from '../content/articles/EverythingIsAChoice';
+import { TheImportanceOfMeditationForPornAddiction } from '../content/articles/TheImportanceOfMeditationForPornAddiction';
+import { PayingTheNeverFapMaintenanceTax } from '../content/articles/PayingTheNeverFapMaintenanceTax';
+import { WhatMakesNeverFapSoDifferent } from '../content/articles/WhatMakesNeverFapSoDifferent';
+import { WhyamIAPornAddict } from '../content/articles/WhyamIAPornAddict';
+import { TheOneRuleOfNeverFap } from '../content/articles/TheOneRuleOfNeverFap';
+import { TheFiveFundamentalPrinciplesOfNeverFap } from '../content/articles/TheFiveFundamentalPrinciplesOfNeverFap';
+import { MyPersonalPornRecoveryJourney } from '../content/articles/MyPersonalPornRecoveryJourney';
+import { IntroductionToTheNeverFapDeluxeGuide } from '../content/articles/IntroductionToTheNeverFapDeluxeGuide';
 
   const ArticlesScreens = new Map();
 

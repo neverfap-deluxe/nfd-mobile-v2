@@ -4,6 +4,9 @@ import { TopBar } from '../../emotion/components';
 import { navigationSettings } from '../navigation';
 // import LinearGradient from 'react-native-linear-gradient';
 
+
+export const ContentListScreen = ({ componentId, contentType }: any) => {
+
 export default class TopBarMain extends Component {
   toSettings = () => {
     navigationSettings();

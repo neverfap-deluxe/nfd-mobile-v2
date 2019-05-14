@@ -4,9 +4,9 @@ import { Container, LatestContent } from '../../emotion/components';
 import { PageTitle, PageSubTitle } from '../../emotion/text';
 import { css } from '@emotion/native';
 
-import TopBarMain from '../topbar/TopBarMain';
-import ContentListItem from '../content/ContentListItem';
-import LoadingPage from './loading/LoadingPage';
+import { TopBarMain } from '../topbar/TopBarMain';
+import { ContentListItem } from '../content/ContentListItem';
+import { LoadingScreen } from './loading/LoadingPage';
 
 import { ApolloProvider } from 'react-apollo';
 import { Query } from 'react-apollo';
@@ -50,7 +50,7 @@ export const HomeScreen = ({ componentId }: any) => {
         query={HOMEPAGE}
         >
       {({ loading, error, data }) => {
-        if (loading) return <LoadingPage/>;
+        if (loading) return <LoadingScreen/>;
         if (error) return <Text>Error! ${error.message}</Text>;
 
         const {
@@ -114,20 +114,3 @@ export const HomeScreen = ({ componentId }: any) => {
     </ApolloProvider>
   );
 }
-
-
-
-// import React, { Component } from 'react';
-// import { Text } from 'react-native';
-// import { Container } from '../emotion/components';
-
-// class InitialisationPage extends Component {
-//   render() {
-//     const { contentType } = this.props;
-//     return (
-//       <Container>
-//         <Text>Loading</Text>
-//       </Container>
-//     );
-//   }
-// }

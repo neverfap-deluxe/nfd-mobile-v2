@@ -41,10 +41,6 @@ const generateContentReplacement = (content) => (
     .replace(/<\/div>/g, '') //
 );
 
-const generateFinalExportStatement = (allContentNamesExport) => (
-  `export default { ${allContentNamesExport} }`
-);
-
 const generateContentHeader = () => (
 `
 import React, { Component } from 'react';
@@ -58,18 +54,16 @@ import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
 const generateContent = (item, properTitle, type) => (
 `
-${type === 'all' ? '' : 'export default'} class ${properTitle} extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          ${generateTitle(item.title)}
-          ${generateContentReplacement(item.content)}
-        </Container>
-      </ScrollView>
-    );
-  }
+${type === 'all' ? '' : 'export'} const ${properTitle} = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        ${generateTitle(item.title)}
+        ${generateContentReplacement(item.content)}
+      </Container>
+    </ScrollView>
+  );
 }
 `
 );
@@ -83,19 +77,19 @@ const generateFiles = (items, type) => {
   }
 };
 
-// const generateFilesAll = (items, type) => {
-//   let allContent = '';
-//   let allContentNamesExport = '';
+const generateFilesAll = (items, type) => {
+  let allContent = '';
+  let allContentNamesExport = '';
 
-//   for (const item of items) {
-//     const properTitle = generateProperTitle(item.title);
-//     allContentNamesExport += `${properTitle},`
-//     allContent += generateContent(item, properTitle, 'all');
-//   }
+  for (const item of items) {
+    const properTitle = generateProperTitle(item.title);
+    allContentNamesExport += `${properTitle},`
+    allContent += generateContent(item, properTitle, 'all');
+  }
 
-//   const template = `${generateContentHeader()}\n${allContent}\n${generateFinalExportStatement(allContentNamesExport)}\n`;
-//   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
-// };
+  const template = `${generateContentHeader()}\n${allContent}\n`;
+  fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
+};
 
 
 // GENERATE PODCAST TEMPLATE
@@ -192,24 +186,24 @@ const generatePodcastFiles = (items, type) => {
   }
 };
 
-// const generatePodcastFilesAll = (items, type) => {
-//   let allContent = '';
-//   let allContentNamesExport = '';
+const generatePodcastFilesAll = (items, type) => {
+  let allContent = '';
+  let allContentNamesExport = '';
 
-//   for (const item of items) {
-//     const properTitle = generateProperTitle(item.title);
-//     allContentNamesExport += `${properTitle},`
-//     allContent += generateContent(item, properTitle, 'all');
-//   }
+  for (const item of items) {
+    const properTitle = generateProperTitle(item.title);
+    allContentNamesExport += `${properTitle},`
+    allContent += generateContent(item, properTitle, 'all');
+  }
 
-//   const template = `${generatePodcastContentHeader()}\n${allContent}\n${generateFinalExportStatement(allContentNamesExport)}\n`;
-//   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
-// };
+  const template = `${generatePodcastContentHeader()}\n${allContent}\n`;
+  fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
+};
 
 
 module.exports = {
-  // generateFilesAll,
+  generateFilesAll,
   generateFiles,
-  // generatePodcastFilesAll,
+  generatePodcastFilesAll,
   generatePodcastFiles,
 }

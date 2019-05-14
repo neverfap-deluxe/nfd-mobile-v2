@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class WhyamIAPornAddict extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>"Why am I A Porn Addict?"</Text>
-
+ 
+export const WhyamIAPornAddict = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>"Why am I A Porn Addict?"</Text>
+        
 
 <Text style={p}>It&rsquo;s a question you&rsquo;ve probably been thinking about for a while.</Text>
 
@@ -195,8 +194,7 @@ export default class WhyamIAPornAddict extends Component {
 
 <Text style={p}>Hopefully this article clarifies the change of thinking that needs to take place, in order for us to overcome our porn addiction.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }

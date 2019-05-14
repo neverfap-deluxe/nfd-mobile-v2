@@ -2,19 +2,18 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../screens/topbar/TopBarStack';
+import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
-
-export default class TheImportanceOfMeditationForPornAddiction extends Component {
-  render() {
-    return (
-      <ScrollView>
-        <Container>
-          <TopBarStack/>
-          <Text style={h1}>The Importance Of Meditation For Porn Addiction</Text>
-
+ 
+export const TheImportanceOfMeditationForPornAddiction = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <Container>
+        <TopBarStack/>
+        <Text style={h1}>The Importance Of Meditation For Porn Addiction</Text>
+        
 
 <Text style={p}>Meditation is the single most important thing you can do for your porn addiction.</Text>
 
@@ -156,8 +155,7 @@ export default class TheImportanceOfMeditationForPornAddiction extends Component
 
 <Text style={p}>I recommend checking out our list of NeverFap Deluxe Practices for a list of exercises you can do to develop awareness in your life.</Text>
 
-        </Container>
-      </ScrollView>
-    );
-  }
+      </Container>
+    </ScrollView>
+  );
 }
