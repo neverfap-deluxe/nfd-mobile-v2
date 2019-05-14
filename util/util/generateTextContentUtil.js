@@ -92,114 +92,114 @@ const generateFilesAll = (items, type) => {
 
 // GENERATE PODCAST TEMPLATE
 
-const generatePodcastContentHeader = () => (
-`
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+// const generatePodcastContentHeader = () => (
+// `
+// import React, { Component } from 'react';
+// import { Text, View } from 'react-native';
 
-import TrackPlayer from 'react-native-track-player';
-`
-);
+// import TrackPlayer from 'react-native-track-player';
+// `
+// );
 
-// TrackPlayer functionality.
-// https://react-native-kit.github.io/react-native-track-player/api/
+// // TrackPlayer functionality.
+// // https://react-native-kit.github.io/react-native-track-player/api/
 
-const generatePodcastContent = (item, properTitle) => (
-`
-export class ${properTitle} extends Component {
+// const generatePodcastContent = (item, properTitle) => (
+// `
+// export class ${properTitle} extends Component {
 
-    componentDidMount() {
-      TrackPlayer.setupPlayer();
-      TrackPlayer.updateOptions({
-        stopWithApp: true,
-        capabilities: [
-          TrackPlayer.CAPABILITY_PLAY,
-          TrackPlayer.CAPABILITY_PAUSE,
-          TrackPlayer.CAPABILITY_SKIP_TO_NEXT,
-          TrackPlayer.CAPABILITY_SKIP_TO_PREVIOUS,
-          TrackPlayer.CAPABILITY_STOP
-        ],
-        compactCapabilities: [
-          TrackPlayer.CAPABILITY_PLAY,
-          TrackPlayer.CAPABILITY_PAUSE
-        ]
-      });
-    }
+//     componentDidMount() {
+//       TrackPlayer.setupPlayer();
+//       TrackPlayer.updateOptions({
+//         stopWithApp: true,
+//         capabilities: [
+//           TrackPlayer.CAPABILITY_PLAY,
+//           TrackPlayer.CAPABILITY_PAUSE,
+//           TrackPlayer.CAPABILITY_SKIP_TO_NEXT,
+//           TrackPlayer.CAPABILITY_SKIP_TO_PREVIOUS,
+//           TrackPlayer.CAPABILITY_STOP
+//         ],
+//         compactCapabilities: [
+//           TrackPlayer.CAPABILITY_PLAY,
+//           TrackPlayer.CAPABILITY_PAUSE
+//         ]
+//       });
+//     }
 
-    togglePlayback = async () => {
-      const currentTrack = await TrackPlayer.getCurrentTrack();
-      if (currentTrack == null) {
-        await TrackPlayer.reset();
-        await TrackPlayer.add(playlistData);
-        await TrackPlayer.add({
-          id: 'local-track',
-          url: localTrack,
-          title: 'Pure (Demo)',
-          artist: 'David Chavez',
-          artwork: 'https://picsum.photos/200',
-        });
-        await TrackPlayer.play();
-      } else {
-        if (PlayerStore.playbackState === TrackPlayer.STATE_PAUSED) {
-          await TrackPlayer.play();
-        } else {
-          await TrackPlayer.pause();
-        }
-      }
-    }
+//     togglePlayback = async () => {
+//       const currentTrack = await TrackPlayer.getCurrentTrack();
+//       if (currentTrack == null) {
+//         await TrackPlayer.reset();
+//         await TrackPlayer.add(playlistData);
+//         await TrackPlayer.add({
+//           id: 'local-track',
+//           url: localTrack,
+//           title: 'Pure (Demo)',
+//           artist: 'David Chavez',
+//           artwork: 'https://picsum.photos/200',
+//         });
+//         await TrackPlayer.play();
+//       } else {
+//         if (PlayerStore.playbackState === TrackPlayer.STATE_PAUSED) {
+//           await TrackPlayer.play();
+//         } else {
+//           await TrackPlayer.pause();
+//         }
+//       }
+//     }
 
-    skipToNext = async () => {
-      try {
-        await TrackPlayer.skipToNext()
-      } catch (_) {}
-    }
+//     skipToNext = async () => {
+//       try {
+//         await TrackPlayer.skipToNext()
+//       } catch (_) {}
+//     }
 
-    skipToPrevious = async () => {
-      try {
-        await TrackPlayer.skipToPrevious()
-      } catch (_) {}
-    }
+//     skipToPrevious = async () => {
+//       try {
+//         await TrackPlayer.skipToPrevious()
+//       } catch (_) {}
+//     }
 
-    render() {
-      return (
-        <Container>
-          ${generateTitle(item.title)}
-          ${generateDate(item.date)}
+//     render() {
+//       return (
+//         <Container>
+//           ${generateTitle(item.title)}
+//           ${generateDate(item.date)}
 
-          <Text>${item.mp3Url}</Text>
-          <Text>${item.content}</Text>
-        </Container>
-      );
-    }
-  }`
-);
+//           <Text>${item.mp3Url}</Text>
+//           <Text>${item.content}</Text>
+//         </Container>
+//       );
+//     }
+//   }`
+// );
 
-const generatePodcastFiles = (items, type) => {
-  for (const item of items) {
-    const properTitle = generateProperTitle(item.title);
-    const template = `${generatePodcastContentHeader()}${generatePodcastContent(item, properTitle, 'single')}`;
-    fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [{}]);
-  }
-};
+// const generatePodcastFiles = (items, type) => {
+//   for (const item of items) {
+//     const properTitle = generateProperTitle(item.title);
+//     const template = `${generatePodcastContentHeader()}${generatePodcastContent(item, properTitle, 'single')}`;
+//     fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [{}]);
+//   }
+// };
 
-const generatePodcastFilesAll = (items, type) => {
-  let allContent = '';
-  let allContentNamesExport = '';
+// const generatePodcastFilesAll = (items, type) => {
+//   let allContent = '';
+//   let allContentNamesExport = '';
 
-  for (const item of items) {
-    const properTitle = generateProperTitle(item.title);
-    allContentNamesExport += `${properTitle},`
-    allContent += generateContent(item, properTitle);
-  }
+//   for (const item of items) {
+//     const properTitle = generateProperTitle(item.title);
+//     allContentNamesExport += `${properTitle},`
+//     allContent += generateContent(item, properTitle);
+//   }
 
-  const template = `${generatePodcastContentHeader()}\n${allContent}\n`;
-  fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
-};
+//   const template = `${generatePodcastContentHeader()}\n${allContent}\n`;
+//   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
+// };
 
 
 module.exports = {
   generateFilesAll,
   generateFiles,
-  generatePodcastFilesAll,
-  generatePodcastFiles,
+  // generatePodcastFilesAll,
+  // generatePodcastFiles,
 }
