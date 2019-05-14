@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { ScrollView, Text } from 'react-native';
 import { Container } from '../../emotion/components';
 
-import TopBarMain from '../topbar/TopBarMain';
+// import { TopBarMain } from '../topbar/TopBarMain';
 
-import Articles from '../content/articles';
-import Practices from '../content/practices';
+import Articles from '../../content/articles';
+import Practices from '../../content/practices';
 // import Podcasts from '../content/other';
 // import Podcasts from '../content/podcasts';
 
 
-export const ContentPageScreen = ({ componentId, contentType, contentTitle }: any) => {
+export const ContentScreen = ({ componentId, contentType, contentTitle }: any) => {
   const selectContent = (contentType: string, contentTitle: string) => {
     switch (contentType) {
       case 'articles': return Articles[contentTitle];
@@ -25,7 +25,7 @@ export const ContentPageScreen = ({ componentId, contentType, contentTitle }: an
   return (
     <ScrollView>
       <Container>
-        <TopBarMain/>
+        {/* <TopBarMain/> */}
         {selectContent(contentType, contentTitle)}
       </Container>
     </ScrollView>

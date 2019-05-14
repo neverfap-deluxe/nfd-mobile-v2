@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
@@ -11,7 +10,6 @@ export const TheEasiestWayToNotTakeOurEmotionsPersonally = ({ componentId }: any
   return (
     <ScrollView>
       <Container>
-        <TopBarStack/>
         <Text style={h1}>The Easiest Way To Not Take Our Emotions Personally</Text>
         <Text style={p}>There are times when our emotions can feel unmanagable.</Text>
 

@@ -3,6 +3,7 @@ import { codePushConfig } from '../utils/code-push';
 
 import { HomeScreen } from './home/Home';
 import { ContentListScreen } from './content/ContentList';
+import { ContentScreen } from './content/ContentScreen';
 import { AboutScreen } from './about/About';
 
 export const INITIALISATION_SCREEN = 'navigation.InitialisationScreen';

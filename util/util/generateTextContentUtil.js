@@ -46,7 +46,6 @@ const generateContentHeader = () => (
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
-import TopBarStack from '../../modules/TopBarStack';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 `
@@ -54,11 +53,10 @@ import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
 
 const generateContent = (item, properTitle, type) => (
 `
-${type === 'all' ? '' : 'export'} const ${properTitle} = ({ componentId }: any) => {
+export const ${properTitle} = ({ componentId }: any) => {
   return (
     <ScrollView>
       <Container>
-        <TopBarStack/>
         ${generateTitle(item.title)}
         ${generateContentReplacement(item.content)}
       </Container>
@@ -72,7 +70,7 @@ ${type === 'all' ? '' : 'export'} const ${properTitle} = ({ componentId }: any) 
 const generateFiles = (items, type) => {
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
-    const template = `${generateContentHeader()}\n ${generateContent(item, properTitle, 'single')}`;
+    const template = `${generateContentHeader()}\n ${generateContent(item, properTitle)}`;
     fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [{}]);
   }
 };
@@ -84,7 +82,7 @@ const generateFilesAll = (items, type) => {
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
     allContentNamesExport += `${properTitle},`
-    allContent += generateContent(item, properTitle, 'all');
+    allContent += generateContent(item, properTitle);
   }
 
   const template = `${generateContentHeader()}\n${allContent}\n`;
@@ -98,7 +96,6 @@ const generatePodcastContentHeader = () => (
 `
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import { TopBarStack } from '../../modules/TopBarStack';
 
 import TrackPlayer from 'react-native-track-player';
 `
@@ -107,9 +104,9 @@ import TrackPlayer from 'react-native-track-player';
 // TrackPlayer functionality.
 // https://react-native-kit.github.io/react-native-track-player/api/
 
-const generatePodcastContent = (item, properTitle, type) => (
+const generatePodcastContent = (item, properTitle) => (
 `
-${type === 'all' ? '' : 'export default'} class ${properTitle} extends Component {
+export class ${properTitle} extends Component {
 
     componentDidMount() {
       TrackPlayer.setupPlayer();
@@ -166,7 +163,6 @@ ${type === 'all' ? '' : 'export default'} class ${properTitle} extends Component
     render() {
       return (
         <Container>
-          <TopBarStack/>
           ${generateTitle(item.title)}
           ${generateDate(item.date)}
 
@@ -193,7 +189,7 @@ const generatePodcastFilesAll = (items, type) => {
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
     allContentNamesExport += `${properTitle},`
-    allContent += generateContent(item, properTitle, 'all');
+    allContent += generateContent(item, properTitle);
   }
 
   const template = `${generatePodcastContentHeader()}\n${allContent}\n`;
