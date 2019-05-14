@@ -5,6 +5,7 @@ import Logo from '../../assets/images/logo.png';
 import { Button } from '../../components/button/Button';
 import { COUNTER } from '../index';
 import s from './Home.scss';
+
 export const HomeScreen = ({ componentId }: any) => {
   const onCounterScreenPress = () => {
     Navigation.push(componentId, {

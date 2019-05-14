@@ -4,7 +4,12 @@ import { codePushConfig } from '../utils/code-push';
 import { CounterScreen } from './counter/Counter';
 import { HomeScreen } from './home/Home';
 
-export const Screens = new Map();
+import PageScreens from './pageScreens';
+import ArticlesScreens from './articlesScreens';
+import PracticesScreens from './practicesScreens';
+// import PodcastsScreens from './podcastsScreens';
+
+export const Screens = new Map([ ...PageScreens, ...ArticlesScreens, ...PracticesScreens,/*  ...PodcastsScreens */ ]);
 
 export const HOME = 'nfdmob.Home';
 export const COUNTER = 'nfdmob.Counter';

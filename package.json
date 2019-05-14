@@ -17,7 +17,11 @@
     "lint": "yarn tslint && yarn stylelint",
     "tslint": "tsc -p . --noEmit --skipLibCheck; tslint --fix 'src/**/*.{ts,tsx}' -p .",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
-    "prepare": "patch-package && if [ -f ./scripts/postinstall.sh ]; then sh ./scripts/postinstall.sh; fi"
+    "prepare": "patch-package && if [ -f ./scripts/postinstall.sh ]; then sh ./scripts/postinstall.sh; fi",
+
+    "g": "node util/generateApi.js && node util/generateContent.js",
+    "ga": "node util/generateApi.js",
+    "gc": "node util/generateContent.js"
   },
   "contributors": [
     "Jérémy Barbet <jeremgraph@gmail.com>",
@@ -45,6 +49,19 @@
     "trailingComma": "es5"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/native": "^10.0.10",
+    "apollo-cache-inmemory": "^1.5.1",
+    "apollo-client": "^2.5.1",
+    "apollo-link": "^1.2.11",
+    "apollo-link-http": "^1.5.14",
+    "apollo-link-state": "^0.4.2",
+    "axios": "^0.18.0",
+    "emotion-theming": "^10.0.10",
+    "fs-extra": "^7.0.1",
+    "graphql": "^14.3.0",
+    "graphql-tag": "^2.10.1",
+    "react-apollo": "^2.5.5",
     "@react-native-community/async-storage": "1.2.0",
     "jsc-android": "241213.0.0",
     "lodash": "4.17.11",
