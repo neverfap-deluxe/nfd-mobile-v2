@@ -25,19 +25,19 @@ const generateContentReplacement = (content) => (
     .replace(/<\/u>/g, '</Text>') // </ u tag references>
     .replace(/<\/strong>/g, '</Text>') // </ a tag references>
     .replace(/<\/?a[^>]*>/g, '') // </ a tag references>
-    .replace(/<\/h[123456]>/g, '</Text>') // 
-    .replace(/<h1>/g, '<Text style={h1}>') // 
-    .replace(/<h2>/g, '<Text style={h2}>') // 
-    .replace(/<h3>/g, '<Text style={h3}>') // 
-    .replace(/<h4>/g, '<Text style={h4}>') // 
-    .replace(/<h5>/g, '<Text style={h5}>') // 
-    .replace(/<ul>/g, '<View style={ul}>') // 
-    .replace(/<\/ul>/g, '</View>') // 
-    .replace(/<li>/g, '<Text style={li}>') // 
-    .replace(/<\/li>/g, '</Text>') // 
-    .replace(/<div style="margin-top: 3rem;" class="five__principles__list__page">/g, '') // 
-    .replace(/<\/div><\/span>/g, '</Text>') // 
-    .replace(/<span><div class="five__principles__item__page">/g, '<Text style={h2}>') // 
+    .replace(/<\/h[123456]>/g, '</Text>') //
+    .replace(/<h1>/g, '<Text style={h1}>') //
+    .replace(/<h2>/g, '<Text style={h2}>') //
+    .replace(/<h3>/g, '<Text style={h3}>') //
+    .replace(/<h4>/g, '<Text style={h4}>') //
+    .replace(/<h5>/g, '<Text style={h5}>') //
+    .replace(/<ul>/g, '<View style={ul}>') //
+    .replace(/<\/ul>/g, '</View>') //
+    .replace(/<li>/g, '<Text style={li}>') //
+    .replace(/<\/li>/g, '</Text>') //
+    .replace(/<div style="margin-top: 3rem;" class="five__principles__list__page">/g, '') //
+    .replace(/<\/div><\/span>/g, '</Text>') //
+    .replace(/<span><div class="five__principles__item__page">/g, '<Text style={h2}>') //
     .replace(/<\/div>/g, '') //
 );
 
@@ -79,7 +79,7 @@ const generateFiles = (items, type) => {
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
     const template = `${generateContentHeader()}\n ${generateContent(item, properTitle, 'single')}`;
-    fse.outputFileSync(`src/content/${type}/${properTitle}.js`, template, [{}]);
+    fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [{}]);
   }
 };
 
@@ -94,7 +94,7 @@ const generateFiles = (items, type) => {
 //   }
 
 //   const template = `${generateContentHeader()}\n${allContent}\n${generateFinalExportStatement(allContentNamesExport)}\n`;
-//   fse.outputFileSync(`src/content/${type}/index.js`, template, [{}]);
+//   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
 // };
 
 
@@ -188,7 +188,7 @@ const generatePodcastFiles = (items, type) => {
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
     const template = `${generatePodcastContentHeader()}${generatePodcastContent(item, properTitle, 'single')}`;
-    fse.outputFileSync(`src/content/${type}/${properTitle}.js`, template, [{}]);
+    fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [{}]);
   }
 };
 
@@ -203,7 +203,7 @@ const generatePodcastFiles = (items, type) => {
 //   }
 
 //   const template = `${generatePodcastContentHeader()}\n${allContent}\n${generateFinalExportStatement(allContentNamesExport)}\n`;
-//   fse.outputFileSync(`src/content/${type}/index.js`, template, [{}]);
+//   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
 // };
 
 

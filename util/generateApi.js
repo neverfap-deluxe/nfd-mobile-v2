@@ -34,35 +34,35 @@ const saveListApiPractices = async () => {
   }
 };
 
-const saveListApiMeditations = async () => {
-  try {
-    const response = await axios.get(MEDITATIONS_URL);
-    const items = response.data.data.meditations;
+// const saveListApiMeditations = async () => {
+//   try {
+//     const response = await axios.get(MEDITATIONS_URL);
+//     const items = response.data.data.meditations;
 
-    saveList(items, 'meditations');
-    saveList(items, 'meditations', 5);
-    createScreens(items, 'meditations');
+//     saveList(items, 'meditations');
+//     saveList(items, 'meditations', 5);
+//     createScreens(items, 'meditations');
 
-  } catch(error) {
-    throw new Error(`saveListApiMeditations - ${error}`);
-  }
-}
+//   } catch(error) {
+//     throw new Error(`saveListApiMeditations - ${error}`);
+//   }
+// }
 
-const saveListApiPodcasts = async () => {
-  try {
-    const response = await axios.get(PODCASTS_URL);
-    const items = response.data.data.podcasts;
+// const saveListApiPodcasts = async () => {
+//   try {
+//     const response = await axios.get(PODCASTS_URL);
+//     const items = response.data.data.podcasts;
 
-    saveList(items, 'podcasts');
-    saveList(items, 'podcasts', 5);
-    createScreens(items, 'podcasts');
+//     saveList(items, 'podcasts');
+//     saveList(items, 'podcasts', 5);
+//     createScreens(items, 'podcasts');
 
-  } catch(error) {
-    throw new Error(`saveListApiPodcasts - ${error}`);
-  }
-}
+//   } catch(error) {
+//     throw new Error(`saveListApiPodcasts - ${error}`);
+//   }
+// }
 
 saveListApiArticles();
 saveListApiPractices();
-saveListApiMeditations();
-saveListApiPodcasts();
+// saveListApiMeditations();
+// saveListApiPodcasts();
