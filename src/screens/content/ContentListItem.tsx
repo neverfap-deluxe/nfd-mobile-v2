@@ -10,17 +10,21 @@ import {
 } from '../../navigation/util';
 import { CONTENT_SCREEN } from '../pageScreens';
 
-// setRoot(`navigation.${properTitle}Screen`)}
-//
+
 const ContentListItemText = ({
   item,
   properTitle,
+  contentCategory,
   contentType,
   componentId,
 }: any) => (
   <TouchableOpacity
     onPress={() =>
-      pushNavigation(componentId, CONTENT_SCREEN, item.title, {
+      pushNavigation(
+        componentId,
+        CONTENT_SCREEN,
+        contentCategory,
+        item.title, {
         properTitle,
         contentType,
       })
@@ -50,7 +54,7 @@ const ContentListItemOther = ({ item, properTitle }: any) => (
   </TouchableOpacity>
 );
 
-export const ContentListItem = ({ item, contentType, componentId }: any) => {
+export const ContentListItem = ({ item, contentType, contentCategory, componentId }: any) => {
   const properTitle = generateProperTitle(item.title);
 
   switch (contentType) {
@@ -60,12 +64,18 @@ export const ContentListItem = ({ item, contentType, componentId }: any) => {
         <ContentListItemText
           item={item}
           properTitle={properTitle}
+          contentCategory={contentCategory}
           contentType={contentType}
           componentId={componentId}
         />
       );
     case 'other':
-      return <ContentListItemOther item={item} properTitle={properTitle} />;
+      return (
+        <ContentListItemOther 
+          item={item} 
+          contentTitle={contentTitle} 
+        />;
+      )
     case 'meditations':
     case 'podcasts':
     default:

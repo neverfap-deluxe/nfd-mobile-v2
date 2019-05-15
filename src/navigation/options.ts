@@ -1,15 +1,41 @@
 
-const navigationOptions = {
+export const statusBar = {
   statusBar: {
-    visible: false,
-    style: 'light' | 'dark'
-  },
+    visible: true,
+    style: 'light', // 'dark'  
+  }
+};
+
+export const layout = {
   layout: {
     direction: 'ltr', // Supported directions are: 'rtl', 'ltr'
     backgroundColor: 'white',
-    orientation: ['portrait', 'landscape'] // An array of supported orientations
-  },
-  modalPresentationStyle: 'overCurrentContext', // Supported styles are: 'formSheet', 'pageSheet', 'overFullScreen', 'overCurrentContext', 'currentContext', 'popover', 'fullScreen' and 'none'. On Android, only overCurrentContext and none are supported.
+    orientation: ['portrait', 'landscape'] // An array of supported orientations  
+  }
+};
+
+export const modalPresentationStyle = 'overCurrentContext'; // Supported styles are: 'formSheet', 'pageSheet', 'overFullScreen', 'overCurrentContext', 'currentContext', 'popover', 'fullScreen' and 'none'. On Android, only overCurrentContext and none are supported.
+
+const title = (title) => title ? { title: { 
+  text: title,
+  //   fontSize: 14,
+  //   color: 'red',
+  //   fontFamily: 'Helvetica',
+  //   component: {
+  //     name: 'example.CustomTopBarTitle',
+  //     alignment: 'center'
+  //   }
+} } : {}
+
+const subtitle = (subtitle) => subtitle ? { subtitle: { 
+  text: subtitle,
+  //   fontSize: 14,
+  //   color: 'red',
+  //   fontFamily: 'Helvetica',
+  //   alignment: 'center'
+} } : {}
+
+export const topBar = (titleArg: string, subtitleArg: string) => ({
   topBar: {
     visible: true,
     animate: false, // Controls whether TopBar visibility changes should be animated
@@ -18,34 +44,22 @@ const navigationOptions = {
     rightButtonColor: 'black',
     drawBehind: false,
     testID: 'topBar',
-    title: {
-      text: 'Title',
-      fontSize: 14,
-      color: 'red',
-      fontFamily: 'Helvetica',
-      component: {
-        name: 'example.CustomTopBarTitle',
-        alignment: 'center'
-      }
-    },
-    subtitle: {
-      text: 'Title',
-      fontSize: 14,
-      color: 'red',
-      fontFamily: 'Helvetica',
-      alignment: 'center'
-    },
+    ...title(titleArg),
+    ...subtitle(subtitleArg),
     backButton: {
-      // icon: require('icon.png'),
       visible: true
+      // icon: require('icon.png'),
     },
-    background: {
-      color: '#00ff00',
-      component: {
-        name: 'example.CustomTopBarBackground'
-      }
-    }
-  },
+    // background: {
+    //   color: '#00ff00',
+    //   component: {
+    //     name: 'example.CustomTopBarBackground'
+    //   }
+    // }
+  }
+});
+
+export const bottomTabs = {
   bottomTabs: {
     visible: true,
     animate: false, // Controls whether BottomTabs visibility changes should be animated
@@ -54,7 +68,10 @@ const navigationOptions = {
     testID: 'bottomTabsTestID',
     drawBehind: false,
     backgroundColor: 'white'
-  },
+  }
+};
+
+export const bottomTab = {
   bottomTab: {
     text: 'Tab 1',
     badge: '2',
@@ -66,8 +83,11 @@ const navigationOptions = {
     textColor: 'red',
     selectedTextColor: 'blue',
     fontFamily: 'Helvetica',
-    fontSize: 10
-  },
+    fontSize: 10  
+  }
+};
+
+export const sideMenu = {
   sideMenu: {
     left: {
       width: 260,
@@ -80,12 +100,18 @@ const navigationOptions = {
       height: 270,
       visible: false,
       enabled: true
-    }
-  },
+    }  
+  }
+};
+
+export const overlay = {
   overlay: {
     interceptTouchOutside: true,
-    handleKeyboardEvents: true
-  },
+    handleKeyboardEvents: true  
+  }
+};
+
+export const preview = {
   preview: {
     reactTag: 0, // result from findNodeHandle(ref)
     width: 100,
@@ -96,11 +122,14 @@ const navigationOptions = {
       title: 'Action title',
       style: 'selected', // default, selected, destructive,
       actions: [/* ... */]
-    }]
-  },
+    }]  
+  }
+};
+
+export const animations = {
   animations: {
     setRoot: {
-      enabled: 'true' | 'false', // Optional, used to enable/disable the animation
+      enabled: 'true', // | 'false' Optional, used to enable/disable the animation
       alpha: {
         from: 0,
         to: 1,
@@ -110,9 +139,9 @@ const navigationOptions = {
       }
     },
     push: {
-      enabled: 'true' | 'false', // Optional, used to enable/disable the animation
+      enabled: 'true', // | 'false' Optional, used to enable/disable the animation
       topBar: {
-        id: 'TEST', // Optional, id of the TopBar we'd like to animate.
+        // id: 'TEST', // Optional, id of the TopBar we'd like to animate.
         alpha: {
           from: 0,
           to: 1
@@ -132,7 +161,7 @@ const navigationOptions = {
       }
     },
     pop: {
-      enabled: 'true' | 'false', // Optional, used to enable/disable the animation
+      enabled: 'true', // | 'false',  Optional, used to enable/disable the animation
       topBar: {
         id: 'TEST', // Optional, id of the TopBar we'd like to animate.
         alpha: {
@@ -154,6 +183,163 @@ const navigationOptions = {
       }
     }
   }
-}
+};
 
-export default navigationOptions;
+// const navigationOptions = {
+  // statusBar: {
+  //   visible: false,
+  //   style: 'light' | 'dark'
+  // },
+  // layout: {
+  //   direction: 'ltr', // Supported directions are: 'rtl', 'ltr'
+  //   backgroundColor: 'white',
+  //   orientation: ['portrait', 'landscape'] // An array of supported orientations
+  // },
+  // modalPresentationStyle: 'overCurrentContext', // Supported styles are: 'formSheet', 'pageSheet', 'overFullScreen', 'overCurrentContext', 'currentContext', 'popover', 'fullScreen' and 'none'. On Android, only overCurrentContext and none are supported.
+  // topBar: {
+  //   visible: true,
+  //   animate: false, // Controls whether TopBar visibility changes should be animated
+  //   hideOnScroll: true,
+  //   leftButtonColor: 'black',
+  //   rightButtonColor: 'black',
+  //   drawBehind: false,
+  //   testID: 'topBar',
+  //   title: {
+  //     text: 'Title',
+  //     fontSize: 14,
+  //     color: 'red',
+  //     fontFamily: 'Helvetica',
+  //     component: {
+  //       name: 'example.CustomTopBarTitle',
+  //       alignment: 'center'
+  //     }
+  //   },
+  //   subtitle: {
+  //     text: 'Title',
+  //     fontSize: 14,
+  //     color: 'red',
+  //     fontFamily: 'Helvetica',
+  //     alignment: 'center'
+  //   },
+  //   backButton: {
+  //     // icon: require('icon.png'),
+  //     visible: true
+  //   },
+  //   background: {
+  //     color: '#00ff00',
+  //     component: {
+  //       name: 'example.CustomTopBarBackground'
+  //     }
+  //   }
+  // },
+  // bottomTabs: {
+  //   visible: true,
+  //   animate: false, // Controls whether BottomTabs visibility changes should be animated
+  //   currentTabIndex: 0,
+  //   currentTabId: 'currentTabId',
+  //   testID: 'bottomTabsTestID',
+  //   drawBehind: false,
+  //   backgroundColor: 'white'
+  // },
+  // bottomTab: {
+  //   text: 'Tab 1',
+  //   badge: '2',
+  //   badgeColor: 'red',
+  //   testID: 'bottomTabTestID',
+  //   // icon: require('tab.png'),
+  //   iconColor: 'red',
+  //   selectedIconColor: 'blue',
+  //   textColor: 'red',
+  //   selectedTextColor: 'blue',
+  //   fontFamily: 'Helvetica',
+  //   fontSize: 10
+  // },
+  // sideMenu: {
+  //   left: {
+  //     width: 260,
+  //     height: 270,
+  //     visible: false,
+  //     enabled: true
+  //   },
+  //   right: {
+  //     width: 260,
+  //     height: 270,
+  //     visible: false,
+  //     enabled: true
+  //   }
+  // },
+  // overlay: {
+  //   interceptTouchOutside: true,
+  //   handleKeyboardEvents: true
+  // },
+  // preview: {
+  //   reactTag: 0, // result from findNodeHandle(ref)
+  //   width: 100,
+  //   height: 100,
+  //   commit: false,
+  //   actions: [{
+  //     id: 'ActionId1',
+  //     title: 'Action title',
+  //     style: 'selected', // default, selected, destructive,
+  //     actions: [/* ... */]
+  //   }]
+  // },
+  // animations: {
+  //   setRoot: {
+  //     enabled: 'true' | 'false', // Optional, used to enable/disable the animation
+  //     alpha: {
+  //       from: 0,
+  //       to: 1,
+  //       duration: 400,
+  //       startDelay: 100,
+  //       interpolation: 'accelerate'
+  //     }
+  //   },
+  //   push: {
+  //     enabled: 'true' | 'false', // Optional, used to enable/disable the animation
+  //     topBar: {
+  //       id: 'TEST', // Optional, id of the TopBar we'd like to animate.
+  //       alpha: {
+  //         from: 0,
+  //         to: 1
+  //       }
+  //     },
+  //     bottomTabs: {
+  //       alpha: {
+  //         from: 0,
+  //         to: 1
+  //       }
+  //     },
+  //     content: {
+  //       alpha: {
+  //         from: 0,
+  //         to: 1
+  //       }
+  //     }
+  //   },
+  //   pop: {
+  //     enabled: 'true' | 'false', // Optional, used to enable/disable the animation
+  //     topBar: {
+  //       id: 'TEST', // Optional, id of the TopBar we'd like to animate.
+  //       alpha: {
+  //         from: 0,
+  //         to: 1
+  //       }
+  //     },
+  //     bottomTabs: {
+  //       alpha: {
+  //         from: 0,
+  //         to: 1
+  //       }
+  //     },
+  //     content: {
+  //       alpha: {
+  //         from: 0,
+  //         to: 1
+  //       }
+  //     }
+  //   }
+  // }
+// }
+
+// export default navigationOptions;

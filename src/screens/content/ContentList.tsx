@@ -44,11 +44,13 @@ export const ContentListScreen = ({ componentId, contentType }: any) => {
     }
   };
 
+  const contentCategory = selectTitle(contentType)
+
   return (
     <ScrollView>
       <Container>
         <TopBarMain />
-        <PageTitle>{selectTitle(contentType)}</PageTitle>
+        <PageTitle>{contentCategory}</PageTitle>
         <FlatList
           data={selectJSON(contentType)}
           renderItem={({ item }) => (
@@ -57,6 +59,7 @@ export const ContentListScreen = ({ componentId, contentType }: any) => {
               item={item}
               contentType={contentType || 'articles'}
               componentId={componentId}
+              contentCategory={contentCategory}
             />
           )}
           keyExtractor={(item, index) => item.title + index}

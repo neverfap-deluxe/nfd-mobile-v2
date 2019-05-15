@@ -1,4 +1,5 @@
 import { Navigation, Linking } from 'react-native-navigation';
+import { statusBar, topBar, layout, overlay, preview, animations } from './options';
 
 export const generateProperTitle = (title: string): string => {
   const title1 = title.split(' ').join('');
@@ -33,6 +34,7 @@ export const pushNavigation = (
   componentId: string,
   screen: string,
   title: string,
+  subtitle: string,
   props = {}
 ) => {
   Navigation.push(componentId, {
@@ -42,11 +44,12 @@ export const pushNavigation = (
         ...props,
       },
       options: {
-        topBar: {
-          title: {
-            text: title,
-          },
-        },
+        ...statusBar,
+        ...layout,
+        ...topBar(title, subtitle),
+        ...overlay,
+        ...preview,
+        ...animations,
       },
     },
   });

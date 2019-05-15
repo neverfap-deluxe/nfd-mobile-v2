@@ -11,6 +11,10 @@ import {
   // CONTENT_SCREEN,
 } from '../screens/pageScreens';
 
+import { statusBar, topBar, layout, overlay, preview, animations } from './options';
+
+
+
 export const navigationMain = () =>
   Navigation.setRoot({
     root: {
@@ -25,11 +29,12 @@ export const navigationMain = () =>
                   text: 'Home',
                   icon: require('../assets/icons/24/home.png'),
                 },
-                topBar: {
-                  title: {
-                    text: 'NeverFap Deluxe Home',
-                  },
-                },
+                ...statusBar,
+                ...topBar('NeverFap Deluxe Home', null),
+                ...layout,
+                ...overlay,
+                ...preview,
+                ...animations,
               },
               children: [
                 {
@@ -48,11 +53,12 @@ export const navigationMain = () =>
                   text: 'Articles',
                   icon: require('../assets/icons/24/newspaper-o.png'),
                 },
-                topBar: {
-                  title: {
-                    text: 'NeverFap Deluxe Articles',
-                  },
-                },
+                ...statusBar,
+                ...topBar('NeverFap Deluxe Articles', null),
+                ...layout,
+                ...overlay,
+                ...preview,
+                ...animations,
               },
               children: [
                 {
@@ -74,11 +80,12 @@ export const navigationMain = () =>
                   text: 'Practices',
                   icon: require('../assets/icons/24/medkit.png'),
                 },
-                topBar: {
-                  title: {
-                    text: 'NeverFap Deluxe Practices',
-                  },
-                },
+                ...statusBar,
+                ...topBar('NeverFap Deluxe Practices', null),
+                ...layout,
+                ...overlay,
+                ...preview,
+                ...animations,
               },
               children: [
                 {
@@ -104,11 +111,12 @@ export const navigationMain = () =>
                   text: 'More',
                   icon: require('../assets/icons/24/ellipsis-h.png'),
                 },
-                topBar: {
-                  title: {
-                    text: 'Other',
-                  },
-                },
+                ...statusBar,
+                ...topBar('Other', null),
+                ...layout,
+                ...overlay,
+                ...preview,
+                ...animations,
               },
             },
           },
