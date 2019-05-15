@@ -19,62 +19,77 @@ export const navigationMain = () =>
         children: [
           {
             stack: {
+              options: {
+                bottomTab: {
+                  fontSize: 12,
+                  text: 'Home',
+                  icon: require('../assets/icons/24/home.png'),
+                },
+                topBar: {
+                  title: {
+                    text: 'NeverFap Deluxe Home',
+                  },
+                },
+              },
               children: [
                 {
                   component: {
                     name: HOME_SCREEN,
-                    options: {
-                      bottomTab: {
-                        fontSize: 12,
-                        text: 'Home',
-                        icon: require('../assets/icons/24/home.png'),
-                      },
-                    },
                   },
-                }
-              ]
-            }
-          },
-          {
-            stack: {
-              children: [
-                {
-                  component: {
-                    name: ARTICLES_SCREEN,
-                    options: {
-                      bottomTab: {
-                        fontSize: 12,
-                        text: 'Articles',
-                        icon: require('../assets/icons/24/newspaper-o.png'),
-                      }
-                    },
-                    passProps: {
-                      contentType: 'articles',
-                    },
-                  }
                 },
-              ]
+              ],
             },
           },
           {
             stack: {
+              options: {
+                bottomTab: {
+                  fontSize: 12,
+                  text: 'Articles',
+                  icon: require('../assets/icons/24/newspaper-o.png'),
+                },
+                topBar: {
+                  title: {
+                    text: 'NeverFap Deluxe Articles',
+                  },
+                },
+              },
+              children: [
+                {
+                  component: {
+                    name: ARTICLES_SCREEN,
+                    passProps: {
+                      contentType: 'articles',
+                    },
+                  },
+                },
+              ],
+            },
+          },
+          {
+            stack: {
+              options: {
+                bottomTab: {
+                  fontSize: 12,
+                  text: 'Practices',
+                  icon: require('../assets/icons/24/medkit.png'),
+                },
+                topBar: {
+                  title: {
+                    text: 'NeverFap Deluxe Practices',
+                  },
+                },
+              },
               children: [
                 {
                   component: {
                     name: PRACTICES_SCREEN,
-                    options: {
-                      bottomTab: {
-                        fontSize: 12,
-                        text: 'Practices',
-                        icon: require('../assets/icons/24/medkit.png')
-                      }
-                    },
                     passProps: {
                       contentType: 'practices',
                     },
-                  }
+                  },
                 },
-              ]
+              ],
             },
           },
           {
@@ -87,7 +102,12 @@ export const navigationMain = () =>
                 bottomTab: {
                   fontSize: 12,
                   text: 'More',
-                  icon: require('./icons/24/ellipsis-h.png'),
+                  icon: require('../assets/icons/24/ellipsis-h.png'),
+                },
+                topBar: {
+                  title: {
+                    text: 'Other',
+                  },
                 },
               },
             },
@@ -105,7 +125,6 @@ export const navigationInitialisation = () =>
       },
     },
   });
-
 
 // const sideMenu = {
 //   left: {

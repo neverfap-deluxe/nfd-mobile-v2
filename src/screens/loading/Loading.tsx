@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { ScrollView, Text } from 'react-native';
 
-import { Container } from '../emotion/components';
+import { Container } from '../../emotion/components';
 import { css } from '@emotion/native';
 
 const loadingText = css`
@@ -21,5 +21,4 @@ export const LoadingScreen = ({ componentId }: any) => {
       </Container>
     </ScrollView>
   );
-}
-
+};

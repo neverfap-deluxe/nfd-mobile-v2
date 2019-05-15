@@ -3,7 +3,7 @@ import { codePushConfig } from '../utils/code-push';
 
 import { HomeScreen } from './home/Home';
 import { ContentListScreen } from './content/ContentList';
-import { ContentScreen } from './content/ContentScreen';
+import { ContentScreen } from './content/Content';
 import { AboutScreen } from './about/About';
 
 export const INITIALISATION_SCREEN = 'navigation.InitialisationScreen';
@@ -17,9 +17,10 @@ export const ABOUT_SCREEN = 'navigation.AboutScreen';
 
 const PageScreens = new Map();
 PageScreens.set(HOME_SCREEN, CodePush(codePushConfig())(HomeScreen));
-PageScreens.set(ARTICLES_SCREEN, CodePush(codePushConfig())(ContentListScreen));
-PageScreens.set(PRACTICES_SCREEN, CodePush(codePushConfig())(ContentListScreen));
-PageScreens.set(OTHER_SCREEN, CodePush(codePushConfig())(ContentListScreen));
-PageScreens.set(ABOUT_SCREEN, CodePush(codePushConfig())(AboutScreen));
+PageScreens.set(CONTENT_SCREEN, ContentScreen);
+PageScreens.set(ARTICLES_SCREEN, ContentListScreen);
+PageScreens.set(PRACTICES_SCREEN, ContentListScreen);
+PageScreens.set(OTHER_SCREEN, ContentListScreen);
+PageScreens.set(ABOUT_SCREEN, AboutScreen);
 
 export default PageScreens;

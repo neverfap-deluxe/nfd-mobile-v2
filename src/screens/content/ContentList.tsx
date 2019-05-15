@@ -16,39 +16,52 @@ import otherJSON from '../../content/api/other';
 export const ContentListScreen = ({ componentId, contentType }: any) => {
   const selectTitle = (type: string): string => {
     switch (type) {
-      case 'articles': return 'Articles';
-      case 'practices': return 'Practices';
-      case 'other': return 'Other';
+      case 'articles':
+        return 'Articles';
+      case 'practices':
+        return 'Practices';
+      case 'other':
+        return 'Other';
       // case 'podcasts': return podcastsJSON;
       // case 'meditations': return meditationsJSON;
-      default: return 'Articles';
+      default:
+        return 'Articles';
     }
   };
 
   const selectJSON = (type: string): any[] => {
     switch (type) {
-      case 'articles': return articlesJSON;
-      case 'practices': return practicesJSON;
-      case 'other': return otherJSON;
+      case 'articles':
+        return articlesJSON;
+      case 'practices':
+        return practicesJSON;
+      case 'other':
+        return otherJSON;
       // case 'podcasts': return podcastsJSON;
       // case 'meditations': return meditationsJSON;
-      default: return articlesJSON;
+      default:
+        return articlesJSON;
     }
   };
 
   return (
     <ScrollView>
       <Container>
-        <TopBarMain/>
+        <TopBarMain />
         <PageTitle>{selectTitle(contentType)}</PageTitle>
         <FlatList
           data={selectJSON(contentType)}
-          renderItem={({item}) => {
-            return <ContentListItem key={item.title} item={item} contentType={contentType || 'articles'} />
-          }}
+          renderItem={({ item }) => (
+            <ContentListItem
+              key={item.title}
+              item={item}
+              contentType={contentType || 'articles'}
+              componentId={componentId}
+            />
+          )}
           keyExtractor={(item, index) => item.title + index}
         />
       </Container>
     </ScrollView>
   );
-}
+};

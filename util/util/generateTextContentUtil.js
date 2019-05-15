@@ -1,26 +1,24 @@
-const fse = require("fs-extra");
+const fse = require('fs-extra');
 const { generateProperTitle } = require('./generateUtil');
 
-const generateTitle = (title) => (
-  `<Text style={h1}>${title}</Text>`
-);
+const generateTitle = title => `<Text style={h1}>${title}</Text>`;
 
-const generateDate = (date) => (
-  `<Text style={h3}>${date}</Text>`
-);
+const generateDate = date => `<Text style={h3}>${date}</Text>`;
 
-const generateClassReplacement = (content) => (
+const generateDefaultExport = allContentNamesExport =>
+  `export default { ${allContentNamesExport} } `;
+
+const generateClassReplacement = content =>
   content
     .replace(/<hr class=\"/g, '<View style={')
-    .replace(/\"\/\u003e/g, '}/>')
-);
+    .replace(/\"\/\u003e/g, '}/>');
 
-const generateContentReplacement = (content) => (
+const generateContentReplacement = content =>
   generateClassReplacement(content)
     .replace(/\u003cp\u003e/g, '<Text style={p}>') // <p>
     .replace(/\u003c\/p\u003e/g, '</Text>') // </p>
     .replace(/(?=<!--)([\s\S]*?)-->/g, '') // <!-- -->
-    .replace(/<u>/g, '<Text style={{textDecoration: "underline"}}>') // </u>
+    .replace(/<u>/g, '<Text style={{textDecorationLine: "underline"}}>') // </u>
     .replace(/<strong>/g, '<Text style={{fontWeight: "bold"}}>') // </ a tag references>
     .replace(/<\/u>/g, '</Text>') // </ u tag references>
     .replace(/<\/strong>/g, '</Text>') // </ a tag references>
@@ -35,24 +33,28 @@ const generateContentReplacement = (content) => (
     .replace(/<\/ul>/g, '</View>') //
     .replace(/<li>/g, '<Text style={li}>') //
     .replace(/<\/li>/g, '</Text>') //
-    .replace(/<div style="margin-top: 3rem;" class="five__principles__list__page">/g, '') //
+    .replace(
+      /<div style="margin-top: 3rem;" class="five__principles__list__page">/g,
+      ''
+    ) //
     .replace(/<\/div><\/span>/g, '</Text>') //
-    .replace(/<span><div class="five__principles__item__page">/g, '<Text style={h2}>') //
-    .replace(/<\/div>/g, '') //
-);
+    .replace(
+      /<span><div class="five__principles__item__page">/g,
+      '<Text style={h2}>'
+    ) //
+    .replace(/<\/div>/g, ''); //
 
-const generateContentHeader = () => (
-`
+const generateContentHeader = () =>
+  `
 import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { Container } from '../../emotion/components';
 import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
 import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
-`
-);
+`;
 
-const generateContent = (item, properTitle, type) => (
-`
+const generateContent = (item, properTitle, type) =>
+  `
 export const ${properTitle} = ({ componentId }: any) => {
   return (
     <ScrollView>
@@ -63,15 +65,18 @@ export const ${properTitle} = ({ componentId }: any) => {
     </ScrollView>
   );
 }
-`
-);
-
+`;
 
 const generateFiles = (items, type) => {
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
-    const template = `${generateContentHeader()}\n ${generateContent(item, properTitle)}`;
-    fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [{}]);
+    const template = `${generateContentHeader()}\n ${generateContent(
+      item,
+      properTitle
+    )}`;
+    fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [
+      {},
+    ]);
   }
 };
 
@@ -81,14 +86,15 @@ const generateFilesAll = (items, type) => {
 
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
-    allContentNamesExport += `${properTitle},`
+    allContentNamesExport += `${properTitle},`;
     allContent += generateContent(item, properTitle);
   }
 
-  const template = `${generateContentHeader()}\n${allContent}\n`;
+  const template = `${generateContentHeader()}\n${allContent}\n${generateDefaultExport(
+    allContentNamesExport
+  )}`;
   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
 };
-
 
 // GENERATE PODCAST TEMPLATE
 
@@ -196,10 +202,9 @@ const generateFilesAll = (items, type) => {
 //   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
 // };
 
-
 module.exports = {
   generateFilesAll,
   generateFiles,
   // generatePodcastFilesAll,
   // generatePodcastFiles,
-}
+};

@@ -1,13 +1,31 @@
-import React, { Component } from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import React from 'react';
+import { TouchableOpacity } from 'react-native';
 import { Item, ItemTitle, ItemDate } from '../../emotion/components';
 
-import { generateProperTitle, setRoot, goToURL } from '../util';
-import { ABOUT_SCREEN } from '../pageScreens';
+import {
+  generateProperTitle,
+  setRoot,
+  pushNavigation,
+  goToURL,
+} from '../../navigation/util';
+import { CONTENT_SCREEN } from '../pageScreens';
 
-// pushNavigation(CONTENT_SCREEN, { contentTitle: properTitle, contentType: contentType })}>
-const ContentListItemText = ({ item, properTitle, contentType }) => (
-  <TouchableOpacity onPress={() => setRoot(`navigation.${properTitle}Screen`)}>
+// setRoot(`navigation.${properTitle}Screen`)}
+//
+const ContentListItemText = ({
+  item,
+  properTitle,
+  contentType,
+  componentId,
+}: any) => (
+  <TouchableOpacity
+    onPress={() =>
+      pushNavigation(componentId, CONTENT_SCREEN, item.title, {
+        properTitle,
+        contentType,
+      })
+    }
+  >
     <Item>
       <ItemTitle>{item.title}</ItemTitle>
       <ItemDate>{item.date}</ItemDate>
@@ -15,14 +33,16 @@ const ContentListItemText = ({ item, properTitle, contentType }) => (
   </TouchableOpacity>
 );
 
-const ContentListItemOther = ({ item, properTitle }) => (
-  <TouchableOpacity onPress={() => {
-    if (item.url) {
-      goToURL(item.url);
-    } else {
-      setRoot(`navigation.${properTitle}Screen`)}
-    }
-  }>
+const ContentListItemOther = ({ item, properTitle }: any) => (
+  <TouchableOpacity
+    onPress={() => {
+      if (item.url) {
+        goToURL(item.url);
+      } else {
+        setRoot(`navigation.${properTitle}Screen`);
+      }
+    }}
+  >
     <Item>
       <ItemTitle>{item.title}</ItemTitle>
       <ItemTitle>{item.description}</ItemTitle>
@@ -30,18 +50,25 @@ const ContentListItemOther = ({ item, properTitle }) => (
   </TouchableOpacity>
 );
 
-export const ContentListItem = ({ item, contentType }) => {
+export const ContentListItem = ({ item, contentType, componentId }: any) => {
   const properTitle = generateProperTitle(item.title);
 
   switch (contentType) {
     case 'articles':
     case 'practices':
-      return <ContentListItemText item={item} properTitle={properTitle} contentType={contentType}/>;
+      return (
+        <ContentListItemText
+          item={item}
+          properTitle={properTitle}
+          contentType={contentType}
+          componentId={componentId}
+        />
+      );
     case 'other':
-      return <ContentListItemOther item={item} properTitle={properTitle}/>;
+      return <ContentListItemOther item={item} properTitle={properTitle} />;
     case 'meditations':
     case 'podcasts':
     default:
       throw new Error('incorrect type - ContentListItem render()');
   }
-}
+};
