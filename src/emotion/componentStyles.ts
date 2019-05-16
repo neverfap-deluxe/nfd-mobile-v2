@@ -1,8 +1,18 @@
 import { Platform, Dimensions, StatusBar } from 'react-native';
 import styled, { css } from '@emotion/native';
 
-export const Container = styled.ScrollView`
+export const Container = styled.View`
   display: flex;
+  background: white;
+  width: ${Dimensions.get('window').width};
+  height: ${Dimensions.get('window').height};
+  padding: 10px;
+  padding-top: ${Platform.OS === 'ios' ? 0 : StatusBar.currentHeight};
+  margin: 10px;
+  border: 4px solid black;
+`;
+
+export const ContentContainer = styled.View`
   background: white;
   width: ${Dimensions.get('window').width};
   height: ${Dimensions.get('window').height};
@@ -36,7 +46,7 @@ export const ItemTitle = styled.Text`
 
 export const ItemDate = styled.Text`
   width: ${Dimensions.get('window').width * 0.3};
-  
+
   font-size: 14px;
   line-height: 22px;
   color: black;

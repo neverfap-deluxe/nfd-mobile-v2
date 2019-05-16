@@ -1,6 +1,6 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { Container } from '../../emotion/componentStyles';
 
 import Articles from '../../content/articles';
 import Practices from '../../content/practices';

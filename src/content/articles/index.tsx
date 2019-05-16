@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { ContentContainer } from '../../emotion/componentStyles';
 import {
   hr,
   hr2,
@@ -11,14 +11,28 @@ import {
   hr4__bottom,
   hrul,
   hrul__bottom,
-} from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+} from '../../emotion/hrStyles';
+import {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  content__date,
+  content__title,
+} from '../../emotion/textStyles';
 
 export const IntroductionToTheNeverFapDeluxeGuide = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Introduction To The NeverFap Deluxe Guide</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Introduction To The NeverFap Deluxe Guide
+        </Text>
+        <Text style={content__date}>2018-10-15</Text>
 
         <Text style={p}>
           Today I’m here to talk to you about porn addiction.
@@ -279,7 +293,7 @@ export const IntroductionToTheNeverFapDeluxeGuide = ({ componentId }: any) => {
           We’re here to understand who we are, what we have to do to change, as
           well as understand how we can improve as people.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -287,8 +301,9 @@ export const IntroductionToTheNeverFapDeluxeGuide = ({ componentId }: any) => {
 export const MyPersonalPornRecoveryJourney = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>My Personal Porn Recovery Journey</Text>
+      <ContentContainer>
+        <Text style={content__title}>My Personal Porn Recovery Journey</Text>
+        <Text style={content__date}>2018-10-22</Text>
 
         <Text style={p}>I came across porn at a very young age.</Text>
 
@@ -659,7 +674,7 @@ export const MyPersonalPornRecoveryJourney = ({ componentId }: any) => {
         <Text style={p}>The information is all here.</Text>
 
         <Text style={p}>Get started today.</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -669,8 +684,11 @@ export const TheFiveFundamentalPrinciplesOfNeverFap = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>The Five Fundamental Principles Of NeverFap</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          The Five Fundamental Principles Of NeverFap
+        </Text>
+        <Text style={content__date}>2018-10-29</Text>
 
         <Text style={p}>
           The NeverFap method of addressing porn addiction comprises of five
@@ -1348,7 +1366,7 @@ export const TheFiveFundamentalPrinciplesOfNeverFap = ({
           contains further information in regards to the NeverFap method of
           overcoming porn addiction.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1356,8 +1374,9 @@ export const TheFiveFundamentalPrinciplesOfNeverFap = ({
 export const TheOneRuleOfNeverFap = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>The One Rule Of NeverFap</Text>
+      <ContentContainer>
+        <Text style={content__title}>The One Rule Of NeverFap</Text>
+        <Text style={content__date}>2018-11-06</Text>
 
         <Text style={p}>
           Let&rsquo;s discuss a NeverFap best case scenario.
@@ -1537,7 +1556,7 @@ export const TheOneRuleOfNeverFap = ({ componentId }: any) => {
         <Text style={p}>
           Put in the work and everything else will fall into place.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1545,8 +1564,9 @@ export const TheOneRuleOfNeverFap = ({ componentId }: any) => {
 export const WhyamIAPornAddict = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>"Why am I A Porn Addict?"</Text>
+      <ContentContainer>
+        <Text style={content__title}>"Why am I A Porn Addict?"</Text>
+        <Text style={content__date}>2018-11-13</Text>
 
         <Text style={p}>
           It&rsquo;s a question you&rsquo;ve probably been thinking about for a
@@ -1910,7 +1930,7 @@ export const WhyamIAPornAddict = ({ componentId }: any) => {
           Hopefully this article clarifies the change of thinking that needs to
           take place, in order for us to overcome our porn addiction.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1918,8 +1938,9 @@ export const WhyamIAPornAddict = ({ componentId }: any) => {
 export const WhatMakesNeverFapSoDifferent = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>What Makes NeverFap So Different</Text>
+      <ContentContainer>
+        <Text style={content__title}>What Makes NeverFap So Different</Text>
+        <Text style={content__date}>2018-11-23</Text>
 
         <Text style={p}>
           NeverFap Deluxe aims to be a comprehensive solution towards addressing
@@ -2181,7 +2202,7 @@ export const WhatMakesNeverFapSoDifferent = ({ componentId }: any) => {
         </Text>
 
         <Text style={p}>That&rsquo;s my guarantee.</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2189,8 +2210,9 @@ export const WhatMakesNeverFapSoDifferent = ({ componentId }: any) => {
 export const PayingTheNeverFapMaintenanceTax = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Paying The NeverFap Maintenance Tax</Text>
+      <ContentContainer>
+        <Text style={content__title}>Paying The NeverFap Maintenance Tax</Text>
+        <Text style={content__date}>2018-12-02</Text>
 
         <Text style={p}>What exactly is the NeverFap Maintenance Tax?</Text>
 
@@ -2403,7 +2425,7 @@ export const PayingTheNeverFapMaintenanceTax = ({ componentId }: any) => {
           It is a hard requirement and by avoiding self-care, we delay so many
           positive aspects of our life.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2413,8 +2435,11 @@ export const TheImportanceOfMeditationForPornAddiction = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>The Importance Of Meditation For Porn Addiction</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          The Importance Of Meditation For Porn Addiction
+        </Text>
+        <Text style={content__date}>2018-12-12</Text>
 
         <Text style={p}>
           Meditation is the single most important thing you can do for your porn
@@ -2642,7 +2667,7 @@ export const TheImportanceOfMeditationForPornAddiction = ({
           I recommend checking out our list of NeverFap Deluxe Practices for a
           list of exercises you can do to develop awareness in your life.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2650,8 +2675,9 @@ export const TheImportanceOfMeditationForPornAddiction = ({
 export const EverythingIsAChoice = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Everything Is A Choice</Text>
+      <ContentContainer>
+        <Text style={content__title}>Everything Is A Choice</Text>
+        <Text style={content__date}>2018-12-26</Text>
 
         <Text style={p}>I want to talk about choice.</Text>
 
@@ -2955,7 +2981,7 @@ export const EverythingIsAChoice = ({ componentId }: any) => {
           Practices for a list of exercises you can do to develop awareness in
           your life.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2965,10 +2991,11 @@ export const TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>
+      <ContentContainer>
+        <Text style={content__title}>
           The Five Principles Of NeverFap As They Relate To My Life
         </Text>
+        <Text style={content__date}>2019-01-07</Text>
 
         <Text style={p}>
           To be quite honest, the five principles are quite arbitrary.
@@ -3309,7 +3336,7 @@ export const TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife = ({
           article The Five Fundamental Principles of NeverFap which does into
           more details from a theoretical perspective.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -3317,8 +3344,11 @@ export const TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife = ({
 export const YouAlwaysHaveTimeForYourMentalHealth = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>You Always Have Time For Your Mental Health</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          You Always Have Time For Your Mental Health
+        </Text>
+        <Text style={content__date}>2019-01-21</Text>
 
         <Text style={p}>
           There&rsquo;s one excuse that I often see porn addicts come up with in
@@ -3632,7 +3662,7 @@ export const YouAlwaysHaveTimeForYourMentalHealth = ({ componentId }: any) => {
           Practices for a list of exercises you can do to develop awareness in
           your life.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -3640,8 +3670,11 @@ export const YouAlwaysHaveTimeForYourMentalHealth = ({ componentId }: any) => {
 export const CreatingYourFirstNeverFapSchedule = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Creating Your First NeverFap Schedule</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Creating Your First NeverFap Schedule
+        </Text>
+        <Text style={content__date}>2019-02-01</Text>
 
         <Text style={p}>Everything in life revolves around practice.</Text>
 
@@ -3929,7 +3962,7 @@ export const CreatingYourFirstNeverFapSchedule = ({ componentId }: any) => {
           to commit to your mental health, I highly recommend reading my article
           You Always Have Time For Your Mental Health
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -3937,8 +3970,9 @@ export const CreatingYourFirstNeverFapSchedule = ({ componentId }: any) => {
 export const TheNeverFapStateOfMind = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>The NeverFap State Of Mind</Text>
+      <ContentContainer>
+        <Text style={content__title}>The NeverFap State Of Mind</Text>
+        <Text style={content__date}>2019-02-06</Text>
 
         <Text style={p}>
           This article aims to explore the idea of what it means to have the
@@ -4094,7 +4128,7 @@ export const TheNeverFapStateOfMind = ({ componentId }: any) => {
           I recommend checking out our list of NeverFap Deluxe Practices for a
           list of exercises you can do to develop calmness in your life.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -4102,8 +4136,11 @@ export const TheNeverFapStateOfMind = ({ componentId }: any) => {
 export const YourPornAddictionIsNotWhoYouAre = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Your Porn Addiction Is Not Who You Are</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Your Porn Addiction Is Not Who You Are
+        </Text>
+        <Text style={content__date}>2019-02-11</Text>
 
         <Text style={p}>
           Porn addicts often struggle to dissociate themselves from their
@@ -4288,7 +4325,7 @@ export const YourPornAddictionIsNotWhoYouAre = ({ componentId }: any) => {
           Because porn addiction is a process, not a retrospective idea based in
           any number of infinite possibilities.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -4296,8 +4333,11 @@ export const YourPornAddictionIsNotWhoYouAre = ({ componentId }: any) => {
 export const TheEasiestWayToIdentifyAJudgement = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>The Easiest Way To Identify A Judgement</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          The Easiest Way To Identify A Judgement
+        </Text>
+        <Text style={content__date}>2019-02-24</Text>
         <Text style={p}>
           Some people have a hard time identifying the judgements they make on a
           daily basis.
@@ -4566,7 +4606,7 @@ export const TheEasiestWayToIdentifyAJudgement = ({ componentId }: any) => {
           awareness exercises, we can go a long way towards developing control
           over our judgements and emotions.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -4576,8 +4616,11 @@ export const TheUltimateAimOfNeverFapDeluxePractices = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>The Ultimate Aim Of NeverFap Deluxe Practices</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          The Ultimate Aim Of NeverFap Deluxe Practices
+        </Text>
+        <Text style={content__date}>2019-03-01</Text>
 
         <Text style={p}>
           NeverFap Deluxe consists of a range of exercises which are designed to
@@ -4699,7 +4742,7 @@ export const TheUltimateAimOfNeverFapDeluxePractices = ({
           The aim is to overcome our porn addiction, and there&rsquo;s no better
           way I know how than through calmness and awareness.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -4707,8 +4750,11 @@ export const TheUltimateAimOfNeverFapDeluxePractices = ({
 export const WhyYouShouldNeverDependOnYourEmotions = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Why You Should Never Depend On Your Emotions</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Why You Should Never Depend On Your Emotions
+        </Text>
+        <Text style={content__date}>2019-03-10</Text>
 
         <Text style={p}>
           One thing that porn addicts are more-than familiar with is this
@@ -4895,7 +4941,7 @@ export const WhyYouShouldNeverDependOnYourEmotions = ({ componentId }: any) => {
           of comprehensive NeverFap Practices which are designed to help you
           regain control over your mind.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -4905,10 +4951,11 @@ export const TheEasiestWayToNotTakeOurEmotionsPersonally = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>
+      <ContentContainer>
+        <Text style={content__title}>
           The Easiest Way To Not Take Our Emotions Personally
         </Text>
+        <Text style={content__date}>2019-04-03</Text>
         <Text style={p}>
           There are times when our emotions can feel unmanagable.
         </Text>
@@ -5229,7 +5276,7 @@ export const TheEasiestWayToNotTakeOurEmotionsPersonally = ({
         <Text style={p}>
           As well as remain calm in the face of emotional uncertainty.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -5237,8 +5284,11 @@ export const TheEasiestWayToNotTakeOurEmotionsPersonally = ({
 export const WhatItFeelsLikeNotToBeAddictedToPorn = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>What It Feels Like Not To Be Addicted To Porn</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          What It Feels Like Not To Be Addicted To Porn
+        </Text>
+        <Text style={content__date}>2019-04-14</Text>
         <Text style={p}>One thing which people often ask me is:</Text>
 
         <View style={hr3} />
@@ -5489,7 +5539,7 @@ export const WhatItFeelsLikeNotToBeAddictedToPorn = ({ componentId }: any) => {
         </Text>
 
         <Text style={p}>I know you can do it.</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -5497,8 +5547,9 @@ export const WhatItFeelsLikeNotToBeAddictedToPorn = ({ componentId }: any) => {
 export const WhatIsNeverFap = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>What Is NeverFap?</Text>
+      <ContentContainer>
+        <Text style={content__title}>What Is NeverFap?</Text>
+        <Text style={content__date}>2019-05-01</Text>
 
         <Text style={p}>
           NeverFap is a comprehensive method of overcoming porn addiction.
@@ -5744,7 +5795,7 @@ export const WhatIsNeverFap = ({ componentId }: any) => {
           From there you can learn more about the various ways in which teach
           you self-control through meditation and various perspective exercises.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -5754,10 +5805,11 @@ export const IsItOkayToOrgasmIfYouHaveAPornAddiction = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>
+      <ContentContainer>
+        <Text style={content__title}>
           Is It Okay To Orgasm If You Have A Porn Addiction?
         </Text>
+        <Text style={content__date}>2019-05-12</Text>
         <Text style={p}>You may be wondering:</Text>
 
         <View style={hr3} />
@@ -5901,7 +5953,7 @@ export const IsItOkayToOrgasmIfYouHaveAPornAddiction = ({
         <Text style={p}>
           You can simply be thriving and happy, just the way you are.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };

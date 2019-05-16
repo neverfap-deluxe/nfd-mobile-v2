@@ -139,3 +139,24 @@ navigationMain();
 StatusBar.setHidden(true, 'slide');
 
 // Navigation.setDefaultOptions(navigationOptions);
+
+
+
+ORIGINAL package.json with eslint
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,json,md}": [
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint"
+    ],
+    "*.{scss}": [
+      "stylelint"
+    ]
+  },

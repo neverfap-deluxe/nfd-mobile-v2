@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { ContentContainer } from '../../emotion/componentStyles';
 import {
   hr,
   hr2,
@@ -11,14 +11,28 @@ import {
   hr4__bottom,
   hrul,
   hrul__bottom,
-} from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+} from '../../emotion/hrStyles';
+import {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  content__date,
+  content__title,
+} from '../../emotion/textStyles';
 
 export const CreatingYourFirstNeverFapSchedule = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Creating Your First NeverFap Schedule</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Creating Your First NeverFap Schedule
+        </Text>
+        <Text style={content__date}>2019-02-01</Text>
 
         <Text style={p}>Everything in life revolves around practice.</Text>
 
@@ -306,7 +320,7 @@ export const CreatingYourFirstNeverFapSchedule = ({ componentId }: any) => {
           to commit to your mental health, I highly recommend reading my article
           You Always Have Time For Your Mental Health
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };

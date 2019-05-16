@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { ContentContainer } from '../../emotion/componentStyles';
 import {
   hr,
   hr2,
@@ -11,18 +11,30 @@ import {
   hr4__bottom,
   hrul,
   hrul__bottom,
-} from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+} from '../../emotion/hrStyles';
+import {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  content__date,
+  content__title,
+} from '../../emotion/textStyles';
 
 export const IsItOkayToOrgasmIfYouHaveAPornAddiction = ({
   componentId,
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>
+      <ContentContainer>
+        <Text style={content__title}>
           Is It Okay To Orgasm If You Have A Porn Addiction?
         </Text>
+        <Text style={content__date}>2019-05-12</Text>
         <Text style={p}>You may be wondering:</Text>
 
         <View style={hr3} />
@@ -166,7 +178,7 @@ export const IsItOkayToOrgasmIfYouHaveAPornAddiction = ({
         <Text style={p}>
           You can simply be thriving and happy, just the way you are.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };

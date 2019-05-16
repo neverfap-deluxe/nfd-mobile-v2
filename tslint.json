@@ -1,6 +1,7 @@
 {
-  "extends": ["@ueno/tslint-config/react-native", "tslint-config-prettier"],
+  "extends": ["@ueno/tslint-config/react-native"],
   "rules": {
     "interface-name": false
-  }
+  },
+  "was-in-extends-but-removed": ["tslint-config-prettier"]
 }

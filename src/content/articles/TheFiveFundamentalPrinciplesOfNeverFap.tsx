@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { ContentContainer } from '../../emotion/componentStyles';
 import {
   hr,
   hr2,
@@ -11,16 +11,30 @@ import {
   hr4__bottom,
   hrul,
   hrul__bottom,
-} from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+} from '../../emotion/hrStyles';
+import {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  content__date,
+  content__title,
+} from '../../emotion/textStyles';
 
 export const TheFiveFundamentalPrinciplesOfNeverFap = ({
   componentId,
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>The Five Fundamental Principles Of NeverFap</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          The Five Fundamental Principles Of NeverFap
+        </Text>
+        <Text style={content__date}>2018-10-29</Text>
 
         <Text style={p}>
           The NeverFap method of addressing porn addiction comprises of five
@@ -698,7 +712,7 @@ export const TheFiveFundamentalPrinciplesOfNeverFap = ({
           contains further information in regards to the NeverFap method of
           overcoming porn addiction.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };

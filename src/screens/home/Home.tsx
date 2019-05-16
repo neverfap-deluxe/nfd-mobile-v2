@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dimensions, ScrollView, View, Text } from 'react-native';
-import { Container, LatestContent } from '../../emotion/components';
-import { PageTitle, PageSubTitle } from '../../emotion/text';
+import { Container, LatestContent } from '../../emotion/componentStyles';
+import { PageTitle, PageSubTitle } from '../../emotion/textStyles';
 import { css } from '@emotion/native';
 
 // import { TopBarMain } from '../topbar/TopBarMain';

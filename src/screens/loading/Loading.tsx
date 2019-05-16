@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, Text } from 'react-native';
 
-import { Container } from '../../emotion/components';
+import { Container } from '../../emotion/componentStyles';
 import { css } from '@emotion/native';
 
 const loadingText = css`

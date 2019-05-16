@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { ContentContainer } from '../../emotion/componentStyles';
 import {
   hr,
   hr2,
@@ -11,14 +11,26 @@ import {
   hr4__bottom,
   hrul,
   hrul__bottom,
-} from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+} from '../../emotion/hrStyles';
+import {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  content__date,
+  content__title,
+} from '../../emotion/textStyles';
 
 export const FocusYourAttention = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Focus Your Attention</Text>
+      <ContentContainer>
+        <Text style={content__title}>Focus Your Attention</Text>
+        <Text style={content__date}>2019-01-04</Text>
 
         <Text style={p}>
           Learning to focus our attention is an important skill.
@@ -174,7 +186,7 @@ export const FocusYourAttention = ({ componentId }: any) => {
         <Text style={p}>
           Play around with it and see where your mind takes you.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -182,8 +194,11 @@ export const FocusYourAttention = ({ componentId }: any) => {
 export const SeparateYourSeeingFromYourFeeling = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Separate Your Seeing From Your Feeling</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Separate Your Seeing From Your Feeling
+        </Text>
+        <Text style={content__date}>2019-01-12</Text>
 
         <Text style={p}>
           This is an exercise which porn addicts benefit from greatly, due to
@@ -407,7 +422,7 @@ export const SeparateYourSeeingFromYourFeeling = ({ componentId }: any) => {
         </Text>
 
         <Text style={p}>The world truly is your oyster ^^</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -415,8 +430,9 @@ export const SeparateYourSeeingFromYourFeeling = ({ componentId }: any) => {
 export const SlowDownTime = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Slow Down Time</Text>
+      <ContentContainer>
+        <Text style={content__title}>Slow Down Time</Text>
+        <Text style={content__date}>2019-01-18</Text>
 
         <Text style={p}>
           This exercise is one of the easiest ways to start building your
@@ -572,7 +588,7 @@ export const SlowDownTime = ({ componentId }: any) => {
         <Text style={p}>
           An idea that will prove very important in following exercises.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -580,8 +596,11 @@ export const SlowDownTime = ({ componentId }: any) => {
 export const StopAbsolutelyEverythingYoureDoing = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Stop Absolutely Everything You're Doing</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Stop Absolutely Everything You're Doing
+        </Text>
+        <Text style={content__date}>2019-01-22</Text>
 
         <Text style={p}>I love this exercise.</Text>
 
@@ -712,7 +731,7 @@ export const StopAbsolutelyEverythingYoureDoing = ({ componentId }: any) => {
         <Text style={p}>
           &hellip;and obviously don&rsquo;t do this while crossing a road.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -720,8 +739,9 @@ export const StopAbsolutelyEverythingYoureDoing = ({ componentId }: any) => {
 export const ObserveYourSenses = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Observe Your Senses</Text>
+      <ContentContainer>
+        <Text style={content__title}>Observe Your Senses</Text>
+        <Text style={content__date}>2019-01-27</Text>
 
         <Text style={p}>
           This exercise encompasses one of the most fundamental skills in
@@ -947,7 +967,7 @@ export const ObserveYourSenses = ({ componentId }: any) => {
         </Text>
 
         <Text style={p}>There&rsquo;s always a first for everything.</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -955,8 +975,9 @@ export const ObserveYourSenses = ({ componentId }: any) => {
 export const DissolveYourVisualField = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Dissolve Your Visual Field</Text>
+      <ContentContainer>
+        <Text style={content__title}>Dissolve Your Visual Field</Text>
+        <Text style={content__date}>2019-02-03</Text>
 
         <Text style={p}>
           This exercise is designed to help dissolve your ego.
@@ -1154,7 +1175,7 @@ export const DissolveYourVisualField = ({ componentId }: any) => {
           have a few minutes alone, where you can really explore this idea
           uninterupted.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1162,8 +1183,9 @@ export const DissolveYourVisualField = ({ componentId }: any) => {
 export const RelaxEverything = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Relax Everything</Text>
+      <ContentContainer>
+        <Text style={content__title}>Relax Everything</Text>
+        <Text style={content__date}>2019-02-13</Text>
 
         <Text style={p}>
           This exercise is incredibly effective, especially for those new to
@@ -1347,7 +1369,7 @@ export const RelaxEverything = ({ componentId }: any) => {
           we will be developing in order to help us cope with life in a more
           effective way.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1355,8 +1377,9 @@ export const RelaxEverything = ({ componentId }: any) => {
 export const CatchingTheOddJudgeOut = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Catching The Odd Judge Out</Text>
+      <ContentContainer>
+        <Text style={content__title}>Catching The Odd Judge Out</Text>
+        <Text style={content__date}>2019-02-28</Text>
 
         <Text style={p}>
           A lot of people find this exercise super useful, because it can help
@@ -1468,7 +1491,7 @@ export const CatchingTheOddJudgeOut = ({ componentId }: any) => {
           We&rsquo;re all here to learn more about how our individual minds
           work.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1478,8 +1501,11 @@ export const IdentifyPointsOfAwarenessThroughoutYourDay = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Identify Points Of Awareness Throughout Your Day</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Identify Points Of Awareness Throughout Your Day
+        </Text>
+        <Text style={content__date}>2019-03-12</Text>
 
         <Text style={p}>
           This exercise is designed to help you keep on top of your awareness
@@ -1650,7 +1676,7 @@ export const IdentifyPointsOfAwarenessThroughoutYourDay = ({
           just gives you such a strong foothold over how you feel throughout the
           day.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1658,8 +1684,9 @@ export const IdentifyPointsOfAwarenessThroughoutYourDay = ({
 export const PutYourselfInOtherPeoplesShoes = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Put Yourself In Other People's Shoes</Text>
+      <ContentContainer>
+        <Text style={content__title}>Put Yourself In Other People's Shoes</Text>
+        <Text style={content__date}>2019-03-18</Text>
         <Text style={p}>This exercise can be inherently difficult.</Text>
 
         <Text style={p}>
@@ -1818,7 +1845,7 @@ export const PutYourselfInOtherPeoplesShoes = ({ componentId }: any) => {
         <Text style={p}>
           Certainly, you may be surprised with what you discover.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1826,8 +1853,9 @@ export const PutYourselfInOtherPeoplesShoes = ({ componentId }: any) => {
 export const UseYourOppositeHand = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Use Your Opposite Hand</Text>
+      <ContentContainer>
+        <Text style={content__title}>Use Your Opposite Hand</Text>
+        <Text style={content__date}>2019-03-22</Text>
         <Text style={p}>
           This exercise is a great way to force yourself out of your comfort
           zone.
@@ -1968,7 +1996,7 @@ export const UseYourOppositeHand = ({ componentId }: any) => {
         </Text>
 
         <Text style={p}>Open your mind and the rest will follow.</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -1976,8 +2004,9 @@ export const UseYourOppositeHand = ({ componentId }: any) => {
 export const WhereDoYouTouch = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Where Do You Touch?</Text>
+      <ContentContainer>
+        <Text style={content__title}>Where Do You Touch?</Text>
+        <Text style={content__date}>2019-03-30</Text>
         <Text style={p}>
           <b>Where Do You Touch?</b> is another classic awareness exercise which
           is designed to help you develop focus and attention.
@@ -2095,7 +2124,7 @@ export const WhereDoYouTouch = ({ componentId }: any) => {
           However it can help us to better control the experience itself once we
           become aware of our behaviours related to touch.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2103,8 +2132,9 @@ export const WhereDoYouTouch = ({ componentId }: any) => {
 export const BlindAttention = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Blind Attention</Text>
+      <ContentContainer>
+        <Text style={content__title}>Blind Attention</Text>
+        <Text style={content__date}>2019-04-07</Text>
 
         <Text style={p}>
           This is a great exercise in terms of being able to understand what it
@@ -2313,7 +2343,7 @@ export const BlindAttention = ({ componentId }: any) => {
         </Text>
 
         <Text style={p}>By practicing these exercises everyday.</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2321,8 +2351,9 @@ export const BlindAttention = ({ componentId }: any) => {
 export const CanYouLookThroughWalls = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Can You Look Through Walls?</Text>
+      <ContentContainer>
+        <Text style={content__title}>Can You Look Through Walls?</Text>
+        <Text style={content__date}>2019-04-14</Text>
 
         <Text style={p}>
           The idea behind this exercise is to teach you to think of your senses
@@ -2417,7 +2448,7 @@ export const CanYouLookThroughWalls = ({ componentId }: any) => {
         <Text style={p}>
           But also dissolve the self-limiting beliefs you may have about them.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2425,8 +2456,9 @@ export const CanYouLookThroughWalls = ({ componentId }: any) => {
 export const Every30Minutes = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Every 30 Minutes</Text>
+      <ContentContainer>
+        <Text style={content__title}>Every 30 Minutes</Text>
+        <Text style={content__date}>2019-04-20</Text>
         <Text style={p}>
           The idea behind this exercise is to help you develop awareness
           throughout your day on an interval basis.
@@ -2523,7 +2555,7 @@ export const Every30Minutes = ({ componentId }: any) => {
         <Text style={p}>Our mental health.</Text>
 
         <Text style={p}>ka-ching</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2533,10 +2565,11 @@ export const FocusYourAttentionOnTheRightSideOfYourVision = ({
 }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>
+      <ContentContainer>
+        <Text style={content__title}>
           Focus Your Attention On The Right Side Of Your Vision
         </Text>
+        <Text style={content__date}>2019-04-28</Text>
         <Text style={p}>
           This is another classic awareness exercise which is short and
           straight-to-the-point.
@@ -2637,7 +2670,7 @@ export const FocusYourAttentionOnTheRightSideOfYourVision = ({
           the better you&rsquo;ll become at training your mind to think in those
           terms.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2645,8 +2678,9 @@ export const FocusYourAttentionOnTheRightSideOfYourVision = ({
 export const WhatCanYourHandDo = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>What Can Your Hand Do?</Text>
+      <ContentContainer>
+        <Text style={content__title}>What Can Your Hand Do?</Text>
+        <Text style={content__date}>2019-05-01</Text>
 
         <Text style={p}>
           This exercise is designed to help you think outside of the box.
@@ -2765,7 +2799,7 @@ export const WhatCanYourHandDo = ({ componentId }: any) => {
         <Text style={p}>
           No different to your recovery if you&rsquo;re just starting out.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2773,8 +2807,11 @@ export const WhatCanYourHandDo = ({ componentId }: any) => {
 export const FocusOnYourFingerAndYourBackground = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Focus On Your Finger And Your Background</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          Focus On Your Finger And Your Background
+        </Text>
+        <Text style={content__date}>2019-05-07</Text>
         <Text style={p}>
           This is a simple exercise most people can benefit from straight-away
           without too much effort.
@@ -2915,7 +2952,7 @@ export const FocusOnYourFingerAndYourBackground = ({ componentId }: any) => {
           There are also a number of additional lessons we can learn from this
           exercise, however I&rsquo;ll leave that up to you to explore!
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };
@@ -2923,8 +2960,9 @@ export const FocusOnYourFingerAndYourBackground = ({ componentId }: any) => {
 export const CatchOutYourJudgements = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>Catch Out Your Judgements</Text>
+      <ContentContainer>
+        <Text style={content__title}>Catch Out Your Judgements</Text>
+        <Text style={content__date}>2019-05-12</Text>
 
         <Text style={p}>
           This exercise is a great way to help you understand when and why you
@@ -3104,7 +3142,7 @@ export const CatchOutYourJudgements = ({ componentId }: any) => {
           And the sooner we can do this, the sooner we can gain control over our
           porn addiction.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };

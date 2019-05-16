@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Item, ItemTitle, ItemDate } from '../../emotion/components';
+import { Item, ItemTitle, ItemDate } from '../../emotion/componentStyles';
 
 import {
   generateProperTitle,
@@ -9,7 +9,6 @@ import {
   goToURL,
 } from '../../navigation/util';
 import { CONTENT_SCREEN } from '../pageScreens';
-
 
 const ContentListItemText = ({
   item,
@@ -23,11 +22,13 @@ const ContentListItemText = ({
       pushNavigation(
         componentId,
         CONTENT_SCREEN,
-        contentCategory,
-        item.title, {
-        properTitle,
-        contentType,
-      })
+        item.title, // contentCategory,
+        '',
+        {
+          properTitle,
+          contentType,
+        }
+      )
     }
   >
     <Item>
@@ -54,7 +55,12 @@ const ContentListItemOther = ({ item, properTitle }: any) => (
   </TouchableOpacity>
 );
 
-export const ContentListItem = ({ item, contentType, contentCategory, componentId }: any) => {
+export const ContentListItem = ({
+  item,
+  contentType,
+  contentCategory,
+  componentId,
+}: any) => {
   const properTitle = generateProperTitle(item.title);
 
   switch (contentType) {
@@ -70,12 +76,7 @@ export const ContentListItem = ({ item, contentType, contentCategory, componentI
         />
       );
     case 'other':
-      return (
-        <ContentListItemOther 
-          item={item} 
-          contentTitle={contentTitle} 
-        />;
-      )
+      return <ContentListItemOther item={item} />;
     case 'meditations':
     case 'podcasts':
     default:

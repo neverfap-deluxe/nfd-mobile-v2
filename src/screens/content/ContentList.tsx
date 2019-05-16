@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { ScrollView, FlatList, Text } from 'react-native';
 
-import { Container } from '../../emotion/components';
-import { PageTitle } from '../../emotion/text';
+import { Container } from '../../emotion/componentStyles';
+import { PageTitle } from '../../emotion/textStyles';
 
 import { TopBarMain } from '../topbar/TopBarMain';
 import { ContentListItem } from './ContentListItem';
@@ -44,7 +44,7 @@ export const ContentListScreen = ({ componentId, contentType }: any) => {
     }
   };
 
-  const contentCategory = selectTitle(contentType)
+  const contentCategory = selectTitle(contentType);
 
   return (
     <ScrollView>

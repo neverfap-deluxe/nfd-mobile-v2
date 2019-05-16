@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, Image, Text } from 'react-native';
-import { TopBar } from '../../emotion/components';
+import { TopBar } from '../../emotion/componentStyles';
 import { navigationMain } from '../../navigation';
 
 export const TopBarStack = ({  }: any) => {

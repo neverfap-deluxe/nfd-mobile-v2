@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { ContentContainer } from '../../emotion/componentStyles';
 import {
   hr,
   hr2,
@@ -11,14 +11,26 @@ import {
   hr4__bottom,
   hrul,
   hrul__bottom,
-} from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+} from '../../emotion/hrStyles';
+import {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  content__date,
+  content__title,
+} from '../../emotion/textStyles';
 
 export const WhatMakesNeverFapSoDifferent = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>What Makes NeverFap So Different</Text>
+      <ContentContainer>
+        <Text style={content__title}>What Makes NeverFap So Different</Text>
+        <Text style={content__date}>2018-11-23</Text>
 
         <Text style={p}>
           NeverFap Deluxe aims to be a comprehensive solution towards addressing
@@ -280,7 +292,7 @@ export const WhatMakesNeverFapSoDifferent = ({ componentId }: any) => {
         </Text>
 
         <Text style={p}>That&rsquo;s my guarantee.</Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
+import { ContentContainer } from '../../emotion/componentStyles';
 import {
   hr,
   hr2,
@@ -11,14 +11,28 @@ import {
   hr4__bottom,
   hrul,
   hrul__bottom,
-} from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+} from '../../emotion/hrStyles';
+import {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  ul,
+  li,
+  content__date,
+  content__title,
+} from '../../emotion/textStyles';
 
 export const YouAlwaysHaveTimeForYourMentalHealth = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
-        <Text style={h1}>You Always Have Time For Your Mental Health</Text>
+      <ContentContainer>
+        <Text style={content__title}>
+          You Always Have Time For Your Mental Health
+        </Text>
+        <Text style={content__date}>2019-01-21</Text>
 
         <Text style={p}>
           There&rsquo;s one excuse that I often see porn addicts come up with in
@@ -332,7 +346,7 @@ export const YouAlwaysHaveTimeForYourMentalHealth = ({ componentId }: any) => {
           Practices for a list of exercises you can do to develop awareness in
           your life.
         </Text>
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 };

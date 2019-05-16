@@ -1,9 +1,9 @@
 const fse = require('fs-extra');
 const { generateProperTitle } = require('./generateUtil');
 
-const generateTitle = title => `<Text style={h1}>${title}</Text>`;
+const generateTitle = title => `<Text style={content__title}>${title}</Text>`;
 
-const generateDate = date => `<Text style={h3}>${date}</Text>`;
+const generateDate = date => `<Text style={content__date}>${date}</Text>`;
 
 const generateDefaultExport = allContentNamesExport =>
   `export default { ${allContentNamesExport} } `;
@@ -46,11 +46,11 @@ const generateContentReplacement = content =>
 
 const generateContentHeader = () =>
   `
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Container } from '../../emotion/components';
-import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../styles/hrStyles';
-import { h1, h2, h3, h4, h5, p, ul, li } from '../styles/textStyles';
+import { ContentContainer } from '../../emotion/componentStyles';
+import { hr, hr2, hr2__bottom, hr3, hr3__bottom, hr4, hr4__bottom, hrul, hrul__bottom } from '../../emotion/hrStyles';
+import { h1, h2, h3, h4, h5, p, ul, li, content__date, content__title } from '../../emotion/textStyles';
 `;
 
 const generateContent = (item, properTitle, type) =>
@@ -58,10 +58,11 @@ const generateContent = (item, properTitle, type) =>
 export const ${properTitle} = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
+      <ContentContainer>
         ${generateTitle(item.title)}
+        ${generateDate(item.date)}
         ${generateContentReplacement(item.content)}
-      </Container>
+      </ContentContainer>
     </ScrollView>
   );
 }
@@ -168,13 +169,13 @@ const generateFilesAll = (items, type) => {
 
 //     render() {
 //       return (
-//         <Container>
+//         <ContentContainer>
 //           ${generateTitle(item.title)}
 //           ${generateDate(item.date)}
 
 //           <Text>${item.mp3Url}</Text>
 //           <Text>${item.content}</Text>
-//         </Container>
+//         </ContentContainer>
 //       );
 //     }
 //   }`

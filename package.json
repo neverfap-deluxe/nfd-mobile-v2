@@ -27,23 +27,6 @@
     "Jérémy Barbet <jeremgraph@gmail.com>",
     "Birkir Gudjonsson <birkir.gudjonsson@gmail.com>"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,json,md}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{ts,tsx}": [
-      "tslint"
-    ],
-    "*.{scss}": [
-      "stylelint"
-    ]
-  },
   "prettier": {
     "singleQuote": true,
     "trailingComma": "es5"
