@@ -8,6 +8,7 @@ import { MoreScreen } from './more/More';
 import { ContentScreen } from './content/Content';
 
 import { AboutModal } from './about/About';
+import { SettingsModal } from './settings/Settings';
 
 export const INITIALISATION_SCREEN = 'navigation.InitialisationScreen';
 export const HOME_SCREEN = 'navigation.HomeScreen';
@@ -16,7 +17,9 @@ export const PRACTICES_SCREEN = 'navigation.PracticesScreen';
 // export const PODCASTS_SCREEN = 'navigation.PodcastsScreen';
 export const CONTENT_SCREEN = 'navigation.ContentScreen';
 export const MORE_SCREEN = 'navigation.MoreScreen';
+
 export const ABOUT_MODAL = 'navigation.AboutModal';
+export const SETTINGS_MODAL = 'navigation.SettingsModal';
 
 const PageScreens = new Map();
 PageScreens.set(HOME_SCREEN, CodePush(codePushConfig())(HomeScreen));
@@ -26,5 +29,6 @@ PageScreens.set(PRACTICES_SCREEN, PracticesScreen);
 PageScreens.set(MORE_SCREEN, MoreScreen);
 
 PageScreens.set(ABOUT_MODAL, AboutModal);
+PageScreens.set(SETTINGS_MODAL, SettingsModal);
 
 export default PageScreens;

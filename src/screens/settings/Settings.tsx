@@ -1,5 +1,5 @@
 import React from 'react';
-import { ModalContainer } from '../../'
+import { ModalContainer } from '../../emotion/componentStyles';
 import { dismissModal } from '../../navigation/util';
 
 export const SettingsModal = ({ componentId }: any) => {
