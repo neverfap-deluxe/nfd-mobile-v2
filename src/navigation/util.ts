@@ -56,19 +56,19 @@ export const pushNavigation = (
   });
 };
 
-export const showModal = () => {
+export const showModal = (screen: string, title: string, props = {}) => {
   Navigation.showModal({
     stack: {
       children: [{
         component: {
-          name: 'example.ModalScreen',
+          name: screen,
           passProps: {
-            text: 'stack with one child'
+            ...props,
           },
           options: {
             topBar: {
               title: {
-                text: 'Modal'
+                text: title
               }
             }
           }
@@ -78,4 +78,4 @@ export const showModal = () => {
   });
 }
 
-export const dismissModal = (componentId) => Navigation.dismissModal(componentId);
+export const dismissModal = (componentId: string) => Navigation.dismissModal(componentId);

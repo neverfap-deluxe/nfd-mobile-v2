@@ -2,13 +2,12 @@ import React from 'react';
 import { ScrollView, Text } from 'react-native';
 
 import { ModalContainer } from '../../emotion/componentStyles';
-import { TopBarStack } from '../topbar/TopBarStack';
+import { dismissModal } from '../../navigation/util';
 
-export const AboutScreen = ({ componentId }: any) => {
+export const AboutModal = ({ componentId }: any) => {
   return (
     <ScrollView>
       <ModalContainer>
-        <TopBarStack />
         <Text>This is NeverFap Deluxe Mobile Application.</Text>
         <Text>
           NeverFap Deluxe is a Comprehensive Porn Addiction Recovery Process.

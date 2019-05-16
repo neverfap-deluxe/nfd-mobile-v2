@@ -1,7 +1,6 @@
 import React from 'react';
-import { ContentList } from '../content/ContentList';
 import { ModalContainer } from '../../'
-
+import { dismissModal } from '../../navigation/util';
 
 export const SettingsModal = ({ componentId }: any) => {
   return (
