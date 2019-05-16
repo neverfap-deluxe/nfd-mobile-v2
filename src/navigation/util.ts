@@ -1,4 +1,5 @@
-import { Navigation, Linking } from 'react-native-navigation';
+import { Navigation } from 'react-native-navigation';
+import { Linking } from 'react-native';
 import { statusBar, topBar, layout, overlay, preview, animations } from './options';
 
 export const generateProperTitle = (title: string): string => {
@@ -54,3 +55,27 @@ export const pushNavigation = (
     },
   });
 };
+
+export const showModal = () => {
+  Navigation.showModal({
+    stack: {
+      children: [{
+        component: {
+          name: 'example.ModalScreen',
+          passProps: {
+            text: 'stack with one child'
+          },
+          options: {
+            topBar: {
+              title: {
+                text: 'Modal'
+              }
+            }
+          }
+        }
+      }]
+    }
+  });
+}
+
+export const dismissModal = (componentId) => Navigation.dismissModal(componentId);

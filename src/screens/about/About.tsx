@@ -1,13 +1,13 @@
 import React from 'react';
 import { ScrollView, Text } from 'react-native';
 
-import { Container } from '../../emotion/componentStyles';
+import { ModalContainer } from '../../emotion/componentStyles';
 import { TopBarStack } from '../topbar/TopBarStack';
 
 export const AboutScreen = ({ componentId }: any) => {
   return (
     <ScrollView>
-      <Container>
+      <ModalContainer>
         <TopBarStack />
         <Text>This is NeverFap Deluxe Mobile Application.</Text>
         <Text>
@@ -23,7 +23,7 @@ export const AboutScreen = ({ componentId }: any) => {
         </Text>
         <Text>https://neverfapdeluxe.com/</Text>
         <Text>Daddy Reade</Text>
-      </Container>
+      </ModalContainer>
     </ScrollView>
   );
 };

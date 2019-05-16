@@ -7,13 +7,18 @@ import {
   // PODCASTS_SCREEN,
   // MEDITATIONS_SCREEN,
   INITIALISATION_SCREEN,
-  OTHER_SCREEN,
+  MORE_SCREEN,
   // CONTENT_SCREEN,
 } from '../screens/pageScreens';
 
-import { statusBar, topBar, layout, overlay, preview, animations } from './options';
-
-
+import {
+  statusBar,
+  topBar,
+  layout,
+  overlay,
+  preview,
+  animations,
+} from './options';
 
 export const navigationMain = () =>
   Navigation.setRoot({
@@ -30,7 +35,7 @@ export const navigationMain = () =>
                   icon: require('../assets/icons/24/home.png'),
                 },
                 ...statusBar,
-                ...topBar('NeverFap Deluxe Home', null),
+                ...topBar('NeverFap Deluxe Home', ''),
                 ...layout,
                 ...overlay,
                 ...preview,
@@ -54,7 +59,7 @@ export const navigationMain = () =>
                   icon: require('../assets/icons/24/newspaper-o.png'),
                 },
                 ...statusBar,
-                ...topBar('NeverFap Deluxe Articles', null),
+                ...topBar('NeverFap Deluxe Articles', ''),
                 ...layout,
                 ...overlay,
                 ...preview,
@@ -81,7 +86,7 @@ export const navigationMain = () =>
                   icon: require('../assets/icons/24/medkit.png'),
                 },
                 ...statusBar,
-                ...topBar('NeverFap Deluxe Practices', null),
+                ...topBar('NeverFap Deluxe Practices', ''),
                 ...layout,
                 ...overlay,
                 ...preview,
@@ -100,24 +105,30 @@ export const navigationMain = () =>
             },
           },
           {
-            component: {
-              name: OTHER_SCREEN,
-              passProps: {
-                contentType: 'other',
-              },
-              options: {
-                bottomTab: {
-                  fontSize: 12,
-                  text: 'More',
-                  icon: require('../assets/icons/24/ellipsis-h.png'),
+            stack: {
+              children: [
+                {
+                  component: {
+                    name: MORE_SCREEN,
+                    passProps: {
+                      contentType: 'more',
+                    },
+                    options: {
+                      bottomTab: {
+                        fontSize: 12,
+                        text: 'More',
+                        icon: require('../assets/icons/24/ellipsis-h.png'),
+                      },
+                      ...statusBar,
+                      ...topBar('More', ''),
+                      ...layout,
+                      ...overlay,
+                      ...preview,
+                      ...animations,
+                    },
+                  },
                 },
-                ...statusBar,
-                ...topBar('Other', null),
-                ...layout,
-                ...overlay,
-                ...preview,
-                ...animations,
-              },
+              ],
             },
           },
         ],

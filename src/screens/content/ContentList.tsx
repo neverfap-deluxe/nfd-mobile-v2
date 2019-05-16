@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { ScrollView, FlatList, Text } from 'react-native';
+import React from 'react';
+import { ScrollView, FlatList } from 'react-native';
 
 import { Container } from '../../emotion/componentStyles';
 import { PageTitle } from '../../emotion/textStyles';
@@ -13,15 +13,15 @@ import practicesJSON from '../../content/api/practices';
 // import meditationsJSON from '../content/api/meditations';
 import otherJSON from '../../content/api/other';
 
-export const ContentListScreen = ({ componentId, contentType }: any) => {
+export const ContentList = ({ componentId, contentType }: any) => {
   const selectTitle = (type: string): string => {
     switch (type) {
       case 'articles':
         return 'Articles';
       case 'practices':
         return 'Practices';
-      case 'other':
-        return 'Other';
+      case 'more':
+        return 'More';
       // case 'podcasts': return podcastsJSON;
       // case 'meditations': return meditationsJSON;
       default:
@@ -35,7 +35,7 @@ export const ContentListScreen = ({ componentId, contentType }: any) => {
         return articlesJSON;
       case 'practices':
         return practicesJSON;
-      case 'other':
+      case 'more':
         return otherJSON;
       // case 'podcasts': return podcastsJSON;
       // case 'meditations': return meditationsJSON;

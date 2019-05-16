@@ -1,7 +1,20 @@
 import { Platform, Dimensions, StatusBar } from 'react-native';
 import styled, { css } from '@emotion/native';
 
+export const LoadingContainer = styled.View`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: ${Dimensions.get('window').width};
+  height: ${Dimensions.get('window').height};
+  padding: 10px;
+  padding-top: ${Platform.OS === 'ios' ? 0 : StatusBar.currentHeight};
+  margin: 10px;
+`;
+
 export const Container = styled.View`
+  flex: 1;
   display: flex;
   background: white;
   width: ${Dimensions.get('window').width};
@@ -16,6 +29,16 @@ export const ContentContainer = styled.View`
   background: white;
   width: ${Dimensions.get('window').width};
   height: ${Dimensions.get('window').height};
+  padding: 10px;
+  padding-top: ${Platform.OS === 'ios' ? 0 : StatusBar.currentHeight};
+  margin: 10px;
+  border: 4px solid black;
+`;
+
+export const ModalContainer = styled.View`
+  background: white;
+  width: ${Dimensions.get('window').width * 0.9};
+  height: ${Dimensions.get('window').height * 0.6};
   padding: 10px;
   padding-top: ${Platform.OS === 'ios' ? 0 : StatusBar.currentHeight};
   margin: 10px;

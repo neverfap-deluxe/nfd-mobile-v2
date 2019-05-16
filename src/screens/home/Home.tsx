@@ -1,47 +1,26 @@
 import React from 'react';
-import { Dimensions, ScrollView, View, Text } from 'react-native';
+import { ScrollView, View, Text } from 'react-native';
 import { Container, LatestContent } from '../../emotion/componentStyles';
 import { PageTitle, PageSubTitle } from '../../emotion/textStyles';
-import { css } from '@emotion/native';
+import { homepage__stats, homepage__stat__block, homepage__stat__title, homepage__stat__number, homepage__join__button } from '../../emotion/homeStyles';
 
-// import { TopBarMain } from '../topbar/TopBarMain';
+import { TopBarMain } from '../topbar/TopBarMain';
 import { ContentListItem } from '../content/ContentListItem';
 import { LoadingScreen } from '../loading/Loading';
 
+import { Button } from '../../components/button/Button';
 import { ApolloProvider } from 'react-apollo';
 import { Query } from 'react-apollo';
 
 import { HOMEPAGE } from '../../graphql/queries/homepage';
 import client from '../../client';
 
+import { goToURL } from '../../navigation/util';
+
 import articlesLatestJSON from '../../content/api/articlesLatest';
 import practicesLatestJSON from '../../content/api/practicesLatest';
 // import podcastsLatestJSON from '../content/api/podcastsLatest';
 // import meditationsJSON from '../content/api/meditations';
-
-const homepage__stats = css`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-`;
-
-const homepage__stat__block = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: ${Dimensions.get('window').width * 0.2};
-`;
-
-const homepage__stat__title = css`
-  width: ${Dimensions.get('window').width * 0.2};
-  text-align: center;
-`;
-
-const homepage__stat__number = css`
-  width: ${Dimensions.get('window').width * 0.2};
-  font-size: 18px;
-`;
 
 export const HomeScreen = ({ componentId }: any) => {
   return (
@@ -60,6 +39,8 @@ export const HomeScreen = ({ componentId }: any) => {
           return (
             <ScrollView>
               <Container>
+                <TopBarMain/>
+
                 <PageTitle>NeverFap Deluxe</PageTitle>
                 {/* <Text style={css`font-size: 24px; margin-top: 6px; margin-bottom: 6px;`}>Daddy Reade is here to help, baby.</Text> */}
 
@@ -68,20 +49,20 @@ export const HomeScreen = ({ componentId }: any) => {
                   <View style={homepage__stats}>
                     <View style={homepage__stat__block}>
                       <Text style={homepage__stat__title}>
-                        Total Participants:
+                        Participants
                       </Text>
                       <Text style={homepage__stat__number}>
                         {getDbUsersStats.total}
                       </Text>
                     </View>
                     <View style={homepage__stat__block}>
-                      <Text style={homepage__stat__title}>Total Posts:</Text>
+                      <Text style={homepage__stat__title}>Posts</Text>
                       <Text style={homepage__stat__number}>
                         {getAccountabilityMessagesStats.total}
                       </Text>
                     </View>
                     <View style={homepage__stat__block}>
-                      <Text style={homepage__stat__title}>Total Reacts:</Text>
+                      <Text style={homepage__stat__title}>Reacts</Text>
                       <Text style={homepage__stat__number}>
                         {getAccountabilityReactsStats.total}
                       </Text>
@@ -89,7 +70,7 @@ export const HomeScreen = ({ componentId }: any) => {
                   </View>
                 </LatestContent>
 
-                <Text>Join #accountabilty program</Text>
+                <Button style={homepage__join__button} onPress={() => goToURL('https://discord.gg/YETRkSj')} title="Join #accountabilty program" />
 
                 <PageSubTitle>Latest Articles</PageSubTitle>
                 <LatestContent>
@@ -128,4 +109,12 @@ export const HomeScreen = ({ componentId }: any) => {
       </Query>
     </ApolloProvider>
   );
+};
+
+HomeScreen.options = {
+  topBar: {
+    title: {
+      text: 'Home',
+    },
+  },
 };

@@ -20,7 +20,7 @@ export const ContentScreen = ({
         return Practices[properTitle];
       // case 'podcasts': return Podcasts[contentTitle];
       // case 'meditations': return meditationsJSON[contentTitle];
-      // case 'other': return otherJSON[contentTitle];
+      // case 'more': return otherJSON[contentTitle];
       default:
         null;
     }

@@ -50,7 +50,7 @@ const ContentListItemOther = ({ item, properTitle }: any) => (
   >
     <Item>
       <ItemTitle>{item.title}</ItemTitle>
-      <ItemTitle>{item.description}</ItemTitle>
+      <ItemDate>{item.description}</ItemDate>
     </Item>
   </TouchableOpacity>
 );
@@ -75,7 +75,7 @@ export const ContentListItem = ({
           componentId={componentId}
         />
       );
-    case 'other':
+    case 'more':
       return <ContentListItemOther item={item} />;
     case 'meditations':
     case 'podcasts':
