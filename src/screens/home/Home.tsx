@@ -1,26 +1,19 @@
 import React from 'react';
-import { ScrollView, View, Text } from 'react-native';
-import { Container, LatestContent } from '../../emotion/componentStyles';
-import { PageTitle, PageSubTitle } from '../../emotion/textStyles';
-import { homepage__stats, homepage__stat__block, homepage__stat__title, homepage__stat__number, homepage__join__button } from '../../emotion/homeStyles';
+import { ScrollView, Text } from 'react-native';
+import { Container } from '../../emotion/componentStyles';
+import { PageTitle } from '../../emotion/textStyles';
 
 import { TopBarMain } from '../topbar/TopBarMain';
-import { ContentListItem } from '../content/ContentListItem';
 import { LoadingScreen } from '../loading/Loading';
 
-import { Button } from '../../components/button/Button';
+import { HomeStats } from './HomeStats';
+import { HomeContent } from './HomeContent';
+
 import { ApolloProvider } from 'react-apollo';
 import { Query } from 'react-apollo';
 
 import { HOMEPAGE } from '../../graphql/queries/homepage';
 import client from '../../client';
-
-import { goToURL } from '../../navigation/util';
-
-import articlesLatestJSON from '../../content/api/articlesLatest';
-import practicesLatestJSON from '../../content/api/practicesLatest';
-// import podcastsLatestJSON from '../content/api/podcastsLatest';
-// import meditationsJSON from '../content/api/meditations';
 
 export const HomeScreen = ({ componentId }: any) => {
   return (
@@ -30,12 +23,6 @@ export const HomeScreen = ({ componentId }: any) => {
           if (loading) return <LoadingScreen />;
           if (error) return <Text>Error! ${error.message}</Text>;
 
-          const {
-            getDbUsersStats,
-            getAccountabilityMessagesStats,
-            getAccountabilityReactsStats,
-          } = data;
-
           return (
             <ScrollView>
               <Container>
@@ -44,64 +31,13 @@ export const HomeScreen = ({ componentId }: any) => {
                 <PageTitle>NeverFap Deluxe</PageTitle>
                 {/* <Text style={css`font-size: 24px; margin-top: 6px; margin-bottom: 6px;`}>Daddy Reade is here to help, baby.</Text> */}
 
-                <PageSubTitle>Latest #accountability Stats</PageSubTitle>
-                <LatestContent>
-                  <View style={homepage__stats}>
-                    <View style={homepage__stat__block}>
-                      <Text style={homepage__stat__title}>
-                        Participants
-                      </Text>
-                      <Text style={homepage__stat__number}>
-                        {getDbUsersStats.total}
-                      </Text>
-                    </View>
-                    <View style={homepage__stat__block}>
-                      <Text style={homepage__stat__title}>Posts</Text>
-                      <Text style={homepage__stat__number}>
-                        {getAccountabilityMessagesStats.total}
-                      </Text>
-                    </View>
-                    <View style={homepage__stat__block}>
-                      <Text style={homepage__stat__title}>Reacts</Text>
-                      <Text style={homepage__stat__number}>
-                        {getAccountabilityReactsStats.total}
-                      </Text>
-                    </View>
-                  </View>
-                </LatestContent>
+                <HomeStats
+                  getDbUsersStats={data.getDbUsersStats}
+                  getAccountabilityMessagesStats={data.getAccountabilityMessagesStats}
+                  getAccountabilityReactsStats={data.getAccountabilityReactsStats}
+                />
 
-                <Button style={homepage__join__button} onPress={() => goToURL('https://discord.gg/YETRkSj')} title="Join #accountabilty program" />
-
-                <PageSubTitle>Latest Articles</PageSubTitle>
-                <LatestContent>
-                  {articlesLatestJSON.map((item: any) => (
-                    <ContentListItem
-                      key={item.title}
-                      item={item}
-                      contentType="articles"
-                      componentId={componentId}
-                    />
-                  ))}
-                </LatestContent>
-
-                <PageSubTitle>Latest Practices</PageSubTitle>
-                <LatestContent>
-                  {practicesLatestJSON.map((item: any) => (
-                    <ContentListItem
-                      key={item.title}
-                      item={item}
-                      contentType="articles"
-                      componentId={componentId}
-                    />
-                  ))}
-                </LatestContent>
-
-                {/* <PageSubTitle>Latest Podcast</PageSubTitle>
-              <LatestContent>
-                {podcastsLatestJSON.map(item => (
-                  <ContentListItem key={item.title} item={item} contentType='articles' />
-                ))}
-              </LatestContent> */}
+                <HomeContent/>
               </Container>
             </ScrollView>
           );
