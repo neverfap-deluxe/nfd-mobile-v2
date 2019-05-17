@@ -4,6 +4,8 @@ import { codePushConfig } from '../utils/code-push';
 import { HomeScreen } from './home/Home';
 import { ArticlesScreen } from './articles/Articles';
 import { PracticesScreen } from './practices/Practices';
+import { MeditationsScreen } from './meditations/Meditations';
+import { PodcastsScreen } from './podcasts/Podcasts';
 import { MoreScreen } from './more/More';
 import { ContentScreen } from './content/Content';
 
@@ -14,7 +16,8 @@ export const INITIALISATION_SCREEN = 'navigation.InitialisationScreen';
 export const HOME_SCREEN = 'navigation.HomeScreen';
 export const ARTICLES_SCREEN = 'navigation.ArticlesScreen';
 export const PRACTICES_SCREEN = 'navigation.PracticesScreen';
-// export const PODCASTS_SCREEN = 'navigation.PodcastsScreen';
+export const PODCASTS_SCREEN = 'navigation.PodcastsScreen';
+export const MEDITATIONS_SCREEN = 'navigation.MeditationsScreen';
 export const CONTENT_SCREEN = 'navigation.ContentScreen';
 export const MORE_SCREEN = 'navigation.MoreScreen';
 
@@ -26,6 +29,8 @@ PageScreens.set(HOME_SCREEN, CodePush(codePushConfig())(HomeScreen));
 PageScreens.set(CONTENT_SCREEN, ContentScreen);
 PageScreens.set(ARTICLES_SCREEN, ArticlesScreen);
 PageScreens.set(PRACTICES_SCREEN, PracticesScreen);
+PageScreens.set(PODCASTS_SCREEN, PodcastsScreen);
+PageScreens.set(MEDITATIONS_SCREEN, MeditationsScreen);
 PageScreens.set(MORE_SCREEN, MoreScreen);
 
 PageScreens.set(ABOUT_MODAL, AboutModal);

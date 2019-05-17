@@ -20,6 +20,36 @@ import {
   animations,
 } from './options';
 
+// const bottomTabSetup = (screen: string, tabTitle: string, topTitle: string, icon: string) => ({
+//   stack: {
+//     options: {
+//       bottomTab: {
+//         fontSize: 12,
+//         text: 'Home',
+//         icon: require('../assets/icons/24/home.png'),
+//       },
+//       ...statusBar,
+//       ...topBar('NeverFap Deluxe Home', ''),
+//       ...layout,
+//       ...overlay,
+//       ...preview,
+//       ...animations,
+//     },
+//     children: [
+//       {
+//         component: {
+//           name: HOME_SCREEN,
+//         },
+//       },
+//     ],
+//   },
+// });
+// ...bottomTabSetup(HOME_SCREEN, 'NeverFap Deluxe Home', 'Home', 'home.png'),
+// ...bottomTabSetup(ARTICLES_SCREEN, 'NeverFap Deluxe Articles', 'Articles', 'newspaper-o.png'),
+// ...bottomTabSetup(PRACTICES_SCREEN, 'NeverFap Deluxe Practices', 'Practices', 'medkit.png'),
+// ...bottomTabSetup(MORE_SCREEN, 'More', 'More', 'ellipsis-h.png'),
+
+
 export const navigationMain = () =>
   Navigation.setRoot({
     root: {
