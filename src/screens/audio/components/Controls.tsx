@@ -1,4 +1,35 @@
+import React from 'react';
+import { View, TouchableOpacity, Image, StyleSheet, Dimensions } from 'react-native';
+
 // https://hackernoon.com/building-a-music-streaming-app-using-react-native-6d0878a13ba4
+const { width, height } = Dimensions.get('window');
+const imageSize = width - 48;
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 8,
+  },
+  playButton: {
+    height: 72,
+    width: 72,
+    borderWidth: 1,
+    borderColor: 'white',
+    borderRadius: 72 / 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  secondaryControl: {
+    height: 18,
+    width: 18,
+  },
+  off: {
+    opacity: 0.30,
+  }
+})
+
 
 export const Controls = ({
   paused,
@@ -11,7 +42,7 @@ export const Controls = ({
   onPressShuffle,
   onPressRepeat,
   forwardDisabled,
-}) => (
+}: any) => (
   <View style={styles.container}>
     <TouchableOpacity activeOpacity={0.0} onPress={onPressShuffle}>
       <Image style={[styles.secondaryControl, shuffleOn ? [] : styles.off]}
