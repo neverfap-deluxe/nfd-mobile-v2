@@ -8,12 +8,13 @@ import {
   pushNavigation,
   goToURL,
 } from '../../navigation/util';
-import { CONTENT_SCREEN } from '../pageScreens';
+import { CONTENT_TEXT_SCREEN } from '../pageScreens';
+import { CONTENT_AUDIO_SCREEN } from '../pageScreens';
 
 const ContentListItemText = ({
   item,
   properTitle,
-  contentCategory,
+  // contentCategory,
   contentType,
   componentId,
 }: any) => (
@@ -21,7 +22,36 @@ const ContentListItemText = ({
     onPress={() =>
       pushNavigation(
         componentId,
-        CONTENT_SCREEN,
+        CONTENT_TEXT_SCREEN,
+        item.title, // contentCategory,
+        '',
+        {
+          properTitle,
+          contentType,
+        }
+      )
+    }
+  >
+    <Item>
+      <ItemTitle>{item.title}</ItemTitle>
+      <ItemDate>{item.date}</ItemDate>
+    </Item>
+  </TouchableOpacity>
+);
+
+
+const ContentListItemAudio = ({
+  item,
+  properTitle,
+  // contentCategory,
+  contentType,
+  componentId,
+}: any) => (
+  <TouchableOpacity
+    onPress={() =>
+      pushNavigation(
+        componentId,
+        CONTENT_AUDIO_SCREEN,
         item.title, // contentCategory,
         '',
         {
@@ -55,6 +85,7 @@ const ContentListItemOther = ({ item, properTitle }: any) => (
   </TouchableOpacity>
 );
 
+
 export const ContentListItem = ({
   item,
   contentType,
@@ -79,6 +110,15 @@ export const ContentListItem = ({
       return <ContentListItemOther item={item} />;
     case 'meditations':
     case 'podcasts':
+      return (
+        <ContentListItemAudio
+          item={item}
+          properTitle={properTitle}
+          contentCategory={contentCategory}
+          contentType={contentType}
+          componentId={componentId}
+        />
+      );
     default:
       throw new Error('incorrect type - ContentListItem render()');
   }

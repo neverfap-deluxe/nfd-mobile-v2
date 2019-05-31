@@ -1,13 +1,9 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
-import { Container } from '../../emotion/componentStyles';
 
 import Articles from '../../content/articles';
 import Practices from '../../content/practices';
-// import Podcasts from '../content/other';
-// import Podcasts from '../content/podcasts';
 
-export const ContentScreen = ({
+export const ContentTextScreen = ({
   componentId,
   contentType,
   properTitle,
@@ -18,9 +14,6 @@ export const ContentScreen = ({
         return Articles[properTitle];
       case 'practices':
         return Practices[properTitle];
-      // case 'podcasts': return Podcasts[contentTitle];
-      // case 'meditations': return meditationsJSON[contentTitle];
-      // case 'more': return otherJSON[contentTitle];
       default:
         null;
     }

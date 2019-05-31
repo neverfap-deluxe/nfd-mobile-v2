@@ -1,32 +1,14 @@
 
-  import { IsItOkayToOrgasmIfYouHaveAPornAddiction } from '../content/articles/IsItOkayToOrgasmIfYouHaveAPornAddiction';
-import { WhatIsNeverFap } from '../content/articles/WhatIsNeverFap';
-import { WhatItFeelsLikeNotToBeAddictedToPorn } from '../content/articles/WhatItFeelsLikeNotToBeAddictedToPorn';
-import { TheEasiestWayToNotTakeOurEmotionsPersonally } from '../content/articles/TheEasiestWayToNotTakeOurEmotionsPersonally';
-import { WhyYouShouldNeverDependOnYourEmotions } from '../content/articles/WhyYouShouldNeverDependOnYourEmotions';
-import { TheUltimateAimOfNeverFapDeluxePractices } from '../content/articles/TheUltimateAimOfNeverFapDeluxePractices';
-import { TheEasiestWayToIdentifyAJudgement } from '../content/articles/TheEasiestWayToIdentifyAJudgement';
-import { YourPornAddictionIsNotWhoYouAre } from '../content/articles/YourPornAddictionIsNotWhoYouAre';
-import { TheNeverFapStateOfMind } from '../content/articles/TheNeverFapStateOfMind';
-import { CreatingYourFirstNeverFapSchedule } from '../content/articles/CreatingYourFirstNeverFapSchedule';
-import { YouAlwaysHaveTimeForYourMentalHealth } from '../content/articles/YouAlwaysHaveTimeForYourMentalHealth';
-import { TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife } from '../content/articles/TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife';
-import { EverythingIsAChoice } from '../content/articles/EverythingIsAChoice';
-import { TheImportanceOfMeditationForPornAddiction } from '../content/articles/TheImportanceOfMeditationForPornAddiction';
-import { PayingTheNeverFapMaintenanceTax } from '../content/articles/PayingTheNeverFapMaintenanceTax';
-import { WhatMakesNeverFapSoDifferent } from '../content/articles/WhatMakesNeverFapSoDifferent';
-import { WhyamIAPornAddict } from '../content/articles/WhyamIAPornAddict';
-import { TheOneRuleOfNeverFap } from '../content/articles/TheOneRuleOfNeverFap';
-import { TheFiveFundamentalPrinciplesOfNeverFap } from '../content/articles/TheFiveFundamentalPrinciplesOfNeverFap';
-import { MyPersonalPornRecoveryJourney } from '../content/articles/MyPersonalPornRecoveryJourney';
-import { IntroductionToTheNeverFapDeluxeGuide } from '../content/articles/IntroductionToTheNeverFapDeluxeGuide';
-
+  import { undefinedTheImportanceOfLettingGo,IsItOkayToOrgasmIfYouHaveAPornAddiction,WhatIsNeverFapDeluxe,WhatToDoWhenYoureIntenselyCravingPorn,WhatItFeelsLikeNotToBeAddictedToPorn,TheEasiestWayToNotTakeOurEmotionsPersonally,TheBiggestJudgementPornAddictsMake,WhyYouShouldNeverDependOnYourEmotions,TheUltimateAimOfNeverFapDeluxePractices,TheEasiestWayToIdentifyAJudgement,YourPornAddictionIsNotWhoYouAre,TheNeverFapStateOfMind,CreatingYourFirstNeverFapSchedule,YouAlwaysHaveTimeForYourMentalHealth,TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife,EverythingIsAChoice,TheImportanceOfMeditationForPornAddiction,PayingTheNeverFapMaintenanceTax,WhatMakesNeverFapSoDifferent,WhyamIAPornAddict,TheOneRuleOfNeverFap,TheFiveFundamentalPrinciplesOfNeverFap,MyPersonalPornRecoveryJourney,IntroductionToTheNeverFapDeluxeGuide, } from '../content/api/articles.ts
   const ArticlesScreens = new Map();
 
-  export const ISITOKAYTOORGASMIFYOUHAVEAPORNADDICTION_SCREEN = 'navigation.IsItOkayToOrgasmIfYouHaveAPornAddictionScreen';
-export const WHATISNEVERFAP_SCREEN = 'navigation.WhatIsNeverFapScreen';
+  export const THEIMPORTANCEOFLETTINGGO_SCREEN = 'navigation.TheImportanceOfLettingGoScreen';
+export const ISITOKAYTOORGASMIFYOUHAVEAPORNADDICTION_SCREEN = 'navigation.IsItOkayToOrgasmIfYouHaveAPornAddictionScreen';
+export const WHATISNEVERFAPDELUXE_SCREEN = 'navigation.WhatIsNeverFapDeluxeScreen';
+export const WHATTODOWHENYOUREINTENSELYCRAVINGPORN_SCREEN = 'navigation.WhatToDoWhenYoureIntenselyCravingPornScreen';
 export const WHATITFEELSLIKENOTTOBEADDICTEDTOPORN_SCREEN = 'navigation.WhatItFeelsLikeNotToBeAddictedToPornScreen';
 export const THEEASIESTWAYTONOTTAKEOUREMOTIONSPERSONALLY_SCREEN = 'navigation.TheEasiestWayToNotTakeOurEmotionsPersonallyScreen';
+export const THEBIGGESTJUDGEMENTPORNADDICTSMAKE_SCREEN = 'navigation.TheBiggestJudgementPornAddictsMakeScreen';
 export const WHYYOUSHOULDNEVERDEPENDONYOUREMOTIONS_SCREEN = 'navigation.WhyYouShouldNeverDependOnYourEmotionsScreen';
 export const THEULTIMATEAIMOFNEVERFAPDELUXEPRACTICES_SCREEN = 'navigation.TheUltimateAimOfNeverFapDeluxePracticesScreen';
 export const THEEASIESTWAYTOIDENTIFYAJUDGEMENT_SCREEN = 'navigation.TheEasiestWayToIdentifyAJudgementScreen';
@@ -45,10 +27,13 @@ export const THEFIVEFUNDAMENTALPRINCIPLESOFNEVERFAP_SCREEN = 'navigation.TheFive
 export const MYPERSONALPORNRECOVERYJOURNEY_SCREEN = 'navigation.MyPersonalPornRecoveryJourneyScreen';
 export const INTRODUCTIONTOTHENEVERFAPDELUXEGUIDE_SCREEN = 'navigation.IntroductionToTheNeverFapDeluxeGuideScreen';
 
-  ArticlesScreens.set(ISITOKAYTOORGASMIFYOUHAVEAPORNADDICTION_SCREEN, IsItOkayToOrgasmIfYouHaveAPornAddiction);
-ArticlesScreens.set(WHATISNEVERFAP_SCREEN, WhatIsNeverFap);
+  ArticlesScreens.set(THEIMPORTANCEOFLETTINGGO_SCREEN, TheImportanceOfLettingGo);
+ArticlesScreens.set(ISITOKAYTOORGASMIFYOUHAVEAPORNADDICTION_SCREEN, IsItOkayToOrgasmIfYouHaveAPornAddiction);
+ArticlesScreens.set(WHATISNEVERFAPDELUXE_SCREEN, WhatIsNeverFapDeluxe);
+ArticlesScreens.set(WHATTODOWHENYOUREINTENSELYCRAVINGPORN_SCREEN, WhatToDoWhenYoureIntenselyCravingPorn);
 ArticlesScreens.set(WHATITFEELSLIKENOTTOBEADDICTEDTOPORN_SCREEN, WhatItFeelsLikeNotToBeAddictedToPorn);
 ArticlesScreens.set(THEEASIESTWAYTONOTTAKEOUREMOTIONSPERSONALLY_SCREEN, TheEasiestWayToNotTakeOurEmotionsPersonally);
+ArticlesScreens.set(THEBIGGESTJUDGEMENTPORNADDICTSMAKE_SCREEN, TheBiggestJudgementPornAddictsMake);
 ArticlesScreens.set(WHYYOUSHOULDNEVERDEPENDONYOUREMOTIONS_SCREEN, WhyYouShouldNeverDependOnYourEmotions);
 ArticlesScreens.set(THEULTIMATEAIMOFNEVERFAPDELUXEPRACTICES_SCREEN, TheUltimateAimOfNeverFapDeluxePractices);
 ArticlesScreens.set(THEEASIESTWAYTOIDENTIFYAJUDGEMENT_SCREEN, TheEasiestWayToIdentifyAJudgement);

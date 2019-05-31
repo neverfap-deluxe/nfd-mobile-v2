@@ -5,7 +5,7 @@ import {
   ARTICLES_SCREEN,
   PRACTICES_SCREEN,
   // PODCASTS_SCREEN,
-  // MEDITATIONS_SCREEN,
+  MEDITATIONS_SCREEN,
   INITIALISATION_SCREEN,
   MORE_SCREEN,
   // CONTENT_SCREEN,
@@ -128,6 +128,33 @@ export const navigationMain = () =>
                     name: PRACTICES_SCREEN,
                     passProps: {
                       contentType: 'practices',
+                    },
+                  },
+                },
+              ],
+            },
+          },
+          {
+            stack: {
+              options: {
+                bottomTab: {
+                  fontSize: 12,
+                  text: 'Meditations',
+                  icon: require('../assets/icons/24/bullseye.png'),
+                },
+                ...statusBar,
+                ...topBar('NeverFap Deluxe Meditations', ''),
+                ...layout,
+                ...overlay,
+                ...preview,
+                ...animations,
+              },
+              children: [
+                {
+                  component: {
+                    name: MEDITATIONS_SCREEN,
+                    passProps: {
+                      contentType: 'meditations',
                     },
                   },
                 },

@@ -18,9 +18,15 @@ const saveList = (items, type, number) => {
   }
 };
 
-const generateImportStatements = (items, type) => (
-  items.map(item => `import { ${generateProperTitle(item.title)} } from '../content/${type}/${generateProperTitle(item.title)}';\n`).join('')
-);
+const generateImportStatements = (items, type) => {
+  let allContentNamesExport;
+  for (const item of items) {
+    const properTitle = generateProperTitle(item.title);
+    allContentNamesExport += `${properTitle},`;
+  }
+
+  return `import { ${allContentNamesExport} } from '../content/api/${type}.ts`;
+};
 
 const generateScreenStatements = (items) => (
   items.map(item => `export const ${generateProperTitle(item.title).toUpperCase()}_SCREEN = 'navigation.${generateProperTitle(item.title)}Screen';\n`).join('')

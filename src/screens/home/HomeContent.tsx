@@ -2,7 +2,7 @@ import React from 'react';
 import { LatestContent } from '../../emotion/componentStyles';
 import { PageSubTitle } from '../../emotion/textStyles';
 
-import { ContentListItem } from '../content/ContentListItem';
+import { ContentListItem } from '../contentText/ContentListItem';
 
 import articlesLatestJSON from '../../content/api/articlesLatest';
 import practicesLatestJSON from '../../content/api/practicesLatest';

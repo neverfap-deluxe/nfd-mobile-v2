@@ -11,6 +11,11 @@ See [react-native-starter docs](https://ueno-llc.github.io/react-native-starter/
 yarn start & react-native run-ios
 ```
 
+// REACT NATIVE VIDEO
+
+https://hackernoon.com/building-a-music-streaming-app-using-react-native-6d0878a13ba4
+
+
 // OTHER READEME.
 
 App generation
@@ -40,6 +45,8 @@ https://github.com/wix/react-native-navigation/issues/4391
 https://github.com/oblador/react-native-vector-icons
 
 https://github.com/birkir/hekla/blob/master/src/screens/index.ts
+
+
 
 "react-native-linear-gradient": "^2.5.4",
 

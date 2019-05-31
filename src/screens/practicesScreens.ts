@@ -1,27 +1,10 @@
 
-  import { CatchOutYourJudgements } from '../content/practices/CatchOutYourJudgements';
-import { FocusOnYourFingerAndYourBackground } from '../content/practices/FocusOnYourFingerAndYourBackground';
-import { WhatCanYourHandDo } from '../content/practices/WhatCanYourHandDo';
-import { FocusYourAttentionOnTheRightSideOfYourVision } from '../content/practices/FocusYourAttentionOnTheRightSideOfYourVision';
-import { Every30Minutes } from '../content/practices/Every30Minutes';
-import { CanYouLookThroughWalls } from '../content/practices/CanYouLookThroughWalls';
-import { BlindAttention } from '../content/practices/BlindAttention';
-import { WhereDoYouTouch } from '../content/practices/WhereDoYouTouch';
-import { UseYourOppositeHand } from '../content/practices/UseYourOppositeHand';
-import { PutYourselfInOtherPeoplesShoes } from '../content/practices/PutYourselfInOtherPeoplesShoes';
-import { IdentifyPointsOfAwarenessThroughoutYourDay } from '../content/practices/IdentifyPointsOfAwarenessThroughoutYourDay';
-import { CatchingTheOddJudgeOut } from '../content/practices/CatchingTheOddJudgeOut';
-import { RelaxEverything } from '../content/practices/RelaxEverything';
-import { DissolveYourVisualField } from '../content/practices/DissolveYourVisualField';
-import { ObserveYourSenses } from '../content/practices/ObserveYourSenses';
-import { StopAbsolutelyEverythingYoureDoing } from '../content/practices/StopAbsolutelyEverythingYoureDoing';
-import { SlowDownTime } from '../content/practices/SlowDownTime';
-import { SeparateYourSeeingFromYourFeeling } from '../content/practices/SeparateYourSeeingFromYourFeeling';
-import { FocusYourAttention } from '../content/practices/FocusYourAttention';
-
+  import { undefinedTakeNoteOfTheColourYellow,WhoIsLooking,CatchOutYourJudgements,FocusOnYourFingerAndYourBackground,WhatCanYourHandDo,FocusYourAttentionOnTheRightSideOfYourVision,Every30Minutes,CanYouLookThroughWalls,BlindAttention,WhereDoYouTouch,UseYourOppositeHand,PutYourselfInOtherPeoplesShoes,IdentifyPointsOfAwarenessThroughoutYourDay,CatchingTheOddJudgeOut,RelaxEverything,DissolveYourVisualField,ObserveYourSenses,StopAbsolutelyEverythingYoureDoing,SlowDownTime,SeparateYourSeeingFromYourFeeling,FocusYourAttention, } from '../content/api/practices.ts
   const PracticesScreens = new Map();
 
-  export const CATCHOUTYOURJUDGEMENTS_SCREEN = 'navigation.CatchOutYourJudgementsScreen';
+  export const TAKENOTEOFTHECOLOURYELLOW_SCREEN = 'navigation.TakeNoteOfTheColourYellowScreen';
+export const WHOISLOOKING_SCREEN = 'navigation.WhoIsLookingScreen';
+export const CATCHOUTYOURJUDGEMENTS_SCREEN = 'navigation.CatchOutYourJudgementsScreen';
 export const FOCUSONYOURFINGERANDYOURBACKGROUND_SCREEN = 'navigation.FocusOnYourFingerAndYourBackgroundScreen';
 export const WHATCANYOURHANDDO_SCREEN = 'navigation.WhatCanYourHandDoScreen';
 export const FOCUSYOURATTENTIONONTHERIGHTSIDEOFYOURVISION_SCREEN = 'navigation.FocusYourAttentionOnTheRightSideOfYourVisionScreen';
@@ -41,7 +24,9 @@ export const SLOWDOWNTIME_SCREEN = 'navigation.SlowDownTimeScreen';
 export const SEPARATEYOURSEEINGFROMYOURFEELING_SCREEN = 'navigation.SeparateYourSeeingFromYourFeelingScreen';
 export const FOCUSYOURATTENTION_SCREEN = 'navigation.FocusYourAttentionScreen';
 
-  PracticesScreens.set(CATCHOUTYOURJUDGEMENTS_SCREEN, CatchOutYourJudgements);
+  PracticesScreens.set(TAKENOTEOFTHECOLOURYELLOW_SCREEN, TakeNoteOfTheColourYellow);
+PracticesScreens.set(WHOISLOOKING_SCREEN, WhoIsLooking);
+PracticesScreens.set(CATCHOUTYOURJUDGEMENTS_SCREEN, CatchOutYourJudgements);
 PracticesScreens.set(FOCUSONYOURFINGERANDYOURBACKGROUND_SCREEN, FocusOnYourFingerAndYourBackground);
 PracticesScreens.set(WHATCANYOURHANDDO_SCREEN, WhatCanYourHandDo);
 PracticesScreens.set(FOCUSYOURATTENTIONONTHERIGHTSIDEOFYOURVISION_SCREEN, FocusYourAttentionOnTheRightSideOfYourVision);

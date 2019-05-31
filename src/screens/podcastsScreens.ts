@@ -1,0 +1,21 @@
+
+  import { EP6TheFallacyOfJudgementAndSelfCriticism,E05TheImportanceOfMaintainingBalance,EP4HowAwarenessHelpsUsRemainInControl,E03HowToBecomeComfortableWithYourEmotions,EP2WhatExactlyConstitutesAsRelapse,EP1MyPersonalNoFapPornRecoveryJourney,  } from '../content/podcasts/index.ts'
+  const PodcastsScreens = new Map();
+
+  export const EP6THEFALLACYOFJUDGEMENTANDSELFCRITICISM_SCREEN = 'navigation.EP6TheFallacyOfJudgementAndSelfCriticismScreen';
+export const E05THEIMPORTANCEOFMAINTAININGBALANCE_SCREEN = 'navigation.E05TheImportanceOfMaintainingBalanceScreen';
+export const EP4HOWAWARENESSHELPSUSREMAININCONTROL_SCREEN = 'navigation.EP4HowAwarenessHelpsUsRemainInControlScreen';
+export const E03HOWTOBECOMECOMFORTABLEWITHYOUREMOTIONS_SCREEN = 'navigation.E03HowToBecomeComfortableWithYourEmotionsScreen';
+export const EP2WHATEXACTLYCONSTITUTESASRELAPSE_SCREEN = 'navigation.EP2WhatExactlyConstitutesAsRelapseScreen';
+export const EP1MYPERSONALNOFAPPORNRECOVERYJOURNEY_SCREEN = 'navigation.EP1MyPersonalNoFapPornRecoveryJourneyScreen';
+
+  PodcastsScreens.set(EP6THEFALLACYOFJUDGEMENTANDSELFCRITICISM_SCREEN, EP6TheFallacyOfJudgementAndSelfCriticism);
+PodcastsScreens.set(E05THEIMPORTANCEOFMAINTAININGBALANCE_SCREEN, E05TheImportanceOfMaintainingBalance);
+PodcastsScreens.set(EP4HOWAWARENESSHELPSUSREMAININCONTROL_SCREEN, EP4HowAwarenessHelpsUsRemainInControl);
+PodcastsScreens.set(E03HOWTOBECOMECOMFORTABLEWITHYOUREMOTIONS_SCREEN, E03HowToBecomeComfortableWithYourEmotions);
+PodcastsScreens.set(EP2WHATEXACTLYCONSTITUTESASRELAPSE_SCREEN, EP2WhatExactlyConstitutesAsRelapse);
+PodcastsScreens.set(EP1MYPERSONALNOFAPPORNRECOVERYJOURNEY_SCREEN, EP1MyPersonalNoFapPornRecoveryJourney);
+
+  export default PodcastsScreens;
+
+  

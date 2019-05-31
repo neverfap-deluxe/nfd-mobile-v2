@@ -9,8 +9,8 @@ import { ContentListItem } from './ContentListItem';
 
 import articlesJSON from '../../content/api/articles';
 import practicesJSON from '../../content/api/practices';
-// import podcastsJSON from '../content/api/podcasts';
-// import meditationsJSON from '../content/api/meditations';
+import podcastsJSON from '../../api/podcasts';
+import meditationsJSON from '../../api/meditations';
 import otherJSON from '../../content/api/other';
 
 export const ContentList = ({ componentId, contentType }: any) => {
@@ -22,8 +22,10 @@ export const ContentList = ({ componentId, contentType }: any) => {
         return 'Practices';
       case 'more':
         return 'More';
-      // case 'podcasts': return podcastsJSON;
-      // case 'meditations': return meditationsJSON;
+      case 'podcasts':
+        return 'Podcasts';
+      case 'meditations':
+        return 'Meditations';
       default:
         return 'Articles';
     }
@@ -37,8 +39,10 @@ export const ContentList = ({ componentId, contentType }: any) => {
         return practicesJSON;
       case 'more':
         return otherJSON;
-      // case 'podcasts': return podcastsJSON;
-      // case 'meditations': return meditationsJSON;
+      case 'podcasts':
+        return podcastsJSON;
+      case 'meditations':
+        return meditationsJSON;
       default:
         return articlesJSON;
     }

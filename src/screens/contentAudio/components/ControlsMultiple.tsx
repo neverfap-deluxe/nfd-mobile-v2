@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 })
 
 
-export const Controls = ({
+export const ControlsMultiple = ({
   paused,
   shuffleOn,
   repeatOn,
