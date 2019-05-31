@@ -1,8 +1,8 @@
 import styled, { css } from '@emotion/native';
 
 export const PageTitle = styled.Text`
-  font-size: 56px;
-  line-height: 62px;
+  font-size: 50px;
+  line-height: 58px;
   margin-top: 12px;
   margin-bottom: 24px;
 `;

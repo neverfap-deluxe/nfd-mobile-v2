@@ -34,35 +34,93 @@ const saveListApiPractices = async () => {
   }
 };
 
-// const saveListApiMeditations = async () => {
-//   try {
-//     const response = await axios.get(MEDITATIONS_URL);
-//     const items = response.data.data.meditations;
+const saveListApiMeditations = async () => {
+  try {
+    const response = await axios.get(MEDITATIONS_URL);
+    const items = response.data.data.meditations;
 
-//     saveList(items, 'meditations');
-//     saveList(items, 'meditations', 5);
-//     createScreens(items, 'meditations');
+    saveList(items, 'meditations');
+    saveList(items, 'meditations', 5);
+    createScreens(items, 'meditations');
 
-//   } catch(error) {
-//     throw new Error(`saveListApiMeditations - ${error}`);
-//   }
-// }
+  } catch(error) {
+    throw new Error(`saveListApiMeditations - ${error}`);
+  }
+}
 
-// const saveListApiPodcasts = async () => {
-//   try {
-//     const response = await axios.get(PODCASTS_URL);
-//     const items = response.data.data.podcasts;
+const saveListApiPodcasts = async () => {
+  try {
+    const response = await axios.get(PODCASTS_URL);
+    const items = response.data.data.podcasts;
 
-//     saveList(items, 'podcasts');
-//     saveList(items, 'podcasts', 5);
-//     createScreens(items, 'podcasts');
+    saveList(items, 'podcasts');
+    saveList(items, 'podcasts', 5);
+    createScreens(items, 'podcasts');
 
-//   } catch(error) {
-//     throw new Error(`saveListApiPodcasts - ${error}`);
-//   }
-// }
+  } catch(error) {
+    throw new Error(`saveListApiPodcasts - ${error}`);
+  }
+}
+
+const saveListApiOther = async () => {
+  try {
+    const other = [
+      {
+        title: "Podcasts",
+        description: "The NeverFap Deluxe Podcast",
+        content: "The NeverFap Deluxe Podcast",
+        url: null,
+      },
+    ];
+
+    const links = [
+      {
+        title: "About",
+        description: "About NeverFap Deluxe",
+        content: "Learn",
+        url: null,
+      },
+      {
+        title: "Twitter",
+        description: "Follow NeverFap Deluxe on Twitter!",
+        content: null,
+        url: "https://twitter.com/neverfapdeluxe",
+      },
+      {
+        title: "Reddit",
+        description: "Join our Subreddit!",
+        content: null,
+        url: "https://reddit.com/r/NeverFapDeluxe/",
+      },
+      {
+        title: "Discord",
+        description: "Join our Discord!",
+        content: null,
+        url: "https://reddit.com/r/NeverFapDeluxe/",
+      },
+      {
+        title: "Patreon",
+        description: "Become a Patreon!",
+        content: "Become a Patreon!",
+        url: "https://patreon.com/neverfapdeluxe",
+      },
+      {
+        title: "Website",
+        description: "NeverFap Deluxe Website",
+        content: "Learn",
+        url: "https://juliusreade.com/",
+      },
+    ];
+
+    saveList(links, 'links');
+    saveList(other, 'other');
+  } catch(error) {
+    throw new Error(`saveListApiOther - ${error}`);
+  }
+}
 
 saveListApiArticles();
 saveListApiPractices();
-// saveListApiMeditations();
-// saveListApiPodcasts();
+saveListApiMeditations();
+saveListApiPodcasts();
+saveListApiOther();

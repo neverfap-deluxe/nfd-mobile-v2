@@ -1,5 +1,5 @@
 
-  import { EP6TheFallacyOfJudgementAndSelfCriticism,E05TheImportanceOfMaintainingBalance,EP4HowAwarenessHelpsUsRemainInControl,E03HowToBecomeComfortableWithYourEmotions,EP2WhatExactlyConstitutesAsRelapse,EP1MyPersonalNoFapPornRecoveryJourney,  } from '../content/podcasts/index.ts'
+  import { EP6TheFallacyOfJudgementAndSelfCriticism,E05TheImportanceOfMaintainingBalance,EP4HowAwarenessHelpsUsRemainInControl,E03HowToBecomeComfortableWithYourEmotions,EP2WhatExactlyConstitutesAsRelapse,EP1MyPersonalNoFapPornRecoveryJourney, } from '../content/podcasts/index.tsx'
   const PodcastsScreens = new Map();
 
   export const EP6THEFALLACYOFJUDGEMENTANDSELFCRITICISM_SCREEN = 'navigation.EP6TheFallacyOfJudgementAndSelfCriticismScreen';

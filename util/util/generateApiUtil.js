@@ -19,13 +19,13 @@ const saveList = (items, type, number) => {
 };
 
 const generateImportStatements = (items, type) => {
-  let allContentNamesExport;
+  let allContentNamesExport = '';
   for (const item of items) {
     const properTitle = generateProperTitle(item.title);
     allContentNamesExport += `${properTitle},`;
   }
 
-  return `import { ${allContentNamesExport} } from '../content/api/${type}.ts`;
+  return `import { ${allContentNamesExport} } from '../content/${type}/index.tsx'`;
 };
 
 const generateScreenStatements = (items) => (

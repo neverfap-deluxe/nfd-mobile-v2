@@ -1,4 +1,6 @@
 import React from 'react';
+import { FlatList } from 'react-native';
+
 import { LatestContent } from '../../emotion/componentStyles';
 import { PageSubTitle } from '../../emotion/textStyles';
 
@@ -14,26 +16,36 @@ export const HomeContent = ({ componentId }: any) => {
     <React.Fragment>
       <PageSubTitle>Latest Articles</PageSubTitle>
       <LatestContent>
-        {articlesLatestJSON.map((item: any) => (
-          <ContentListItem
-            key={item.title}
-            item={item}
-            contentType="articles"
-            componentId={componentId}
-          />
-        ))}
+        <FlatList
+          data={articlesLatestJSON}
+          renderItem={({ item }) => (
+            <ContentListItem
+              key={item.title}
+              item={item}
+              contentType={'articles'}
+              componentId={componentId}
+              contentCategory={'Articles'}
+            />
+          )}
+          keyExtractor={(item: any, index: any) => item.title + index}
+        />
       </LatestContent>
 
       <PageSubTitle>Latest Practices</PageSubTitle>
       <LatestContent>
-        {practicesLatestJSON.map((item: any) => (
-          <ContentListItem
-            key={item.title}
-            item={item}
-            contentType="practices"
-            componentId={componentId}
-          />
-        ))}
+        <FlatList
+          data={practicesLatestJSON}
+          renderItem={({ item }) => (
+            <ContentListItem
+              key={item.title}
+              item={item}
+              contentType={'practices'}
+              componentId={componentId}
+              contentCategory={'Practices'}
+            />
+          )}
+          keyExtractor={(item: any, index: any) => item.title + index}
+        />
       </LatestContent>
     </React.Fragment>
   );

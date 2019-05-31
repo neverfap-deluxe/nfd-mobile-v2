@@ -37,7 +37,7 @@ export const HomeScreen = ({ componentId }: any) => {
                   getAccountabilityReactsStats={data.getAccountabilityReactsStats}
                 />
 
-                <HomeContent/>
+                <HomeContent componentId={componentId}/>
               </Container>
             </ScrollView>
           );

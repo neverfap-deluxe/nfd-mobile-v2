@@ -68,20 +68,7 @@ export const ${properTitle} = ({ componentId }: any) => {
 }
 `;
 
-const generateFiles = (items, type) => {
-  for (const item of items) {
-    const properTitle = generateProperTitle(item.title);
-    const template = `${generateContentHeader()}\n ${generateContent(
-      item,
-      properTitle
-    )}`;
-    fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [
-      {},
-    ]);
-  }
-};
-
-const generateFilesAll = (items, type) => {
+const generateTextFilesAll = (items, type) => {
   let allContent = '';
   let allContentNamesExport = '';
 
@@ -97,61 +84,20 @@ const generateFilesAll = (items, type) => {
   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
 };
 
-// GENERATE PODCAST TEMPLATE
-
-// const generatePodcastContentHeader = () => (
-// `
-// import React, { Component } from 'react';
-// import { Text, View } from 'react-native';
-
-// import TrackPlayer from 'react-native-track-player';
-// `
-// );
-
-// // TrackPlayer functionality.
-// // https://react-native-kit.github.io/react-native-track-player/api/
-
-// const generatePodcastContent = (item, properTitle) => (
-// `
-//     render() {
-//       return (
-//         <ContentContainer>
-//           ${generateTitle(item.title)}
-//           ${generateDate(item.date)}
-
-//           <Text>${item.mp3Url}</Text>
-//           <Text>${item.content}</Text>
-//         </ContentContainer>
-//       );
-//     }
-//   }`
-// );
-
-// const generatePodcastFiles = (items, type) => {
-//   for (const item of items) {
-//     const properTitle = generateProperTitle(item.title);
-//     const template = `${generatePodcastContentHeader()}${generatePodcastContent(item, properTitle, 'single')}`;
-//     fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [{}]);
-//   }
-// };
-
-// const generatePodcastFilesAll = (items, type) => {
-//   let allContent = '';
-//   let allContentNamesExport = '';
-
-//   for (const item of items) {
-//     const properTitle = generateProperTitle(item.title);
-//     allContentNamesExport += `${properTitle},`
-//     allContent += generateContent(item, properTitle);
-//   }
-
-//   const template = `${generatePodcastContentHeader()}\n${allContent}\n`;
-//   fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
-// };
-
 module.exports = {
-  generateFilesAll,
-  generateFiles,
-  // generatePodcastFilesAll,
-  // generatePodcastFiles,
+  generateTextFilesAll,
+  // generateFiles,
 };
+
+// const generateFiles = (items, type) => {
+//   for (const item of items) {
+//     const properTitle = generateProperTitle(item.title);
+//     const template = `${generateContentHeader()}\n ${generateContent(
+//       item,
+//       properTitle
+//     )}`;
+//     fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [
+//       {},
+//     ]);
+//   }
+// };

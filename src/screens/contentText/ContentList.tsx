@@ -9,8 +9,8 @@ import { ContentListItem } from './ContentListItem';
 
 import articlesJSON from '../../content/api/articles';
 import practicesJSON from '../../content/api/practices';
-import podcastsJSON from '../../api/podcasts';
-import meditationsJSON from '../../api/meditations';
+import podcastsJSON from '../../content/api/podcasts';
+import meditationsJSON from '../../content/api/meditations';
 import otherJSON from '../../content/api/other';
 
 export const ContentList = ({ componentId, contentType }: any) => {

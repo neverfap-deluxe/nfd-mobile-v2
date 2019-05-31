@@ -1,11 +1,4 @@
-const fse = require('fs-extra');
-const { generateProperTitle } = require('./generateUtil');
 
-const generateFinalExportStatement = allContentNamesExport =>
-  `export default { ${allContentNamesExport} }`;
-
-const generateContentHeader = () =>
-  `
   import React, { Component } from 'react';
   import {
     View,
@@ -30,11 +23,9 @@ const generateContentHeader = () =>
       width: 0,
     }
   };
-`;
 
-const generateContent = (item, properTitle, type) =>
-  `
-export class ${properTitle} extends Component {
+
+export class EP1ObserveWhatYouSee extends Component {
   constructor(props: any) {
     super(props);
 
@@ -70,10 +61,10 @@ export class ${properTitle} extends Component {
   render() {
     const { paused, totalLength, isChanging, currentPosition, selectedTrack, repeatOn, shuffleOn }: any = this.state;
     const track = {
-      title: "${item.title}",
+      title: "EP1 - Observe What You See",
       artist: 'Julius Reade',
       albumArtUrl: "https://neverfapdeluxe.com/images/logo.png",
-      audioUrl: "${item.mp3Url}",
+      audioUrl: "https://s3.castbox.fm/1d/10/e3/9239a649bb85addc36d0754c3a.mp3",
 
     }
 
@@ -115,39 +106,5 @@ export class ${properTitle} extends Component {
     );
   }
 }
-`;
 
-const generateAudioFilesAll = (items, type) => {
-  let allContent = '';
-  let allContentNamesExport = '';
-
-  for (const item of items) {
-    const properTitle = generateProperTitle(item.title);
-    allContentNamesExport += `${properTitle},`;
-    allContent += generateContent(item, properTitle, 'all');
-  }
-
-  const template = `${generateContentHeader()}\n${allContent}\n${generateFinalExportStatement(
-    allContentNamesExport
-  )}\n`;
-  fse.outputFileSync(`src/content/${type}/index.tsx`, template, [{}]);
-};
-
-module.exports = {
-  generateAudioFilesAll,
-  // generatePodcastFiles,
-};
-
-// const generateFiles = (items, type) => {
-//   for (const item of items) {
-//     const properTitle = generateProperTitle(item.title);
-//     const template = `${generateContentHeader()}\n ${generateContent(
-//       item,
-//       properTitle,
-//       'single'
-//     )}`;
-//     fse.outputFileSync(`src/content/${type}/${properTitle}.tsx`, template, [
-//       {},
-//     ]);
-//   }
-// };
+export default { EP1ObserveWhatYouSee, }
