@@ -113,7 +113,7 @@ export const navigationMain = () =>
                 bottomTab: {
                   fontSize: 12,
                   text: 'Practices',
-                  icon: require('../assets/icons/24/medkit.png'),
+                  icon: require('../assets/icons/24/bullseye.png'),
                 },
                 ...statusBar,
                 ...topBar('NeverFap Deluxe Practices', ''),
@@ -140,7 +140,7 @@ export const navigationMain = () =>
                 bottomTab: {
                   fontSize: 12,
                   text: 'Meditations',
-                  icon: require('../assets/icons/24/bullseye.png'),
+                  icon: require('../assets/icons/24/medkit.png'),
                 },
                 ...statusBar,
                 ...topBar('NeverFap Deluxe Meditations', ''),

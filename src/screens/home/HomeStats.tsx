@@ -6,6 +6,7 @@ import { Button } from '../../components/button/Button';
 import { goToURL } from '../../navigation/util';
 
 import { homepage__stats, homepage__stat__block, homepage__stat__title, homepage__stat__number, homepage__join__button } from '../../emotion/homeStyles';
+import { css } from '@emotion/native';
 
 export const HomeStats = ({ getDbUsersStats, getAccountabilityMessagesStats, getAccountabilityReactsStats }: any) => {
   return (
@@ -34,8 +35,9 @@ export const HomeStats = ({ getDbUsersStats, getAccountabilityMessagesStats, get
           </View>
         </View>
       </LatestContent>
-
-      <Button style={homepage__join__button} onPress={() => goToURL('https://discord.gg/YETRkSj')} title="Join #accountabilty" />
+      <View style={css`margin-top: 30px;`}>
+        <Button style={homepage__join__button} onPress={() => goToURL('https://discord.gg/YETRkSj')} title="Join #accountabilty" />
+      </View>
     </React.Fragment>
   );
 };

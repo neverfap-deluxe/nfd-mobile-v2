@@ -7394,11 +7394,6 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-opencollective-postinstall@^2.0.0:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
-  integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
-
 opn@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/opn/-/opn-3.0.3.tgz#b6d99e7399f78d65c3baaffef1fb288e9b85243a"
@@ -8386,14 +8381,6 @@ react-native-config@0.11.7:
   resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.11.7.tgz#a2b323f2ecd76a4df88cbb6bc86eaa2ef9febee7"
   integrity sha512-dn5s+zhwLyE25vRT/vaEtLk/j8ZL1UZKvejORNDWakSwpOnLmFurFeaZV83IqkPlfWHXHFdsYe2IRYG1WN4WkQ==
 
-react-native-firebase@5.2.3:
-  version "5.2.3"
-  resolved "https://registry.yarnpkg.com/react-native-firebase/-/react-native-firebase-5.2.3.tgz#1e7867b32028cad24785b181aa9aba07e3787109"
-  integrity sha512-8XLioEQDSN8o0Uiu1cEb4Y50yC5PvECQjSV/+b6A9TzWmLrrfYwXkUWQH1Rua8OUWXAXCobknV6JQeKa3NsvJA==
-  dependencies:
-    opencollective-postinstall "^2.0.0"
-    prop-types "^15.6.2"
-
 react-native-navigation@*:
   version "2.18.5"
   resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.18.5.tgz#e4e89f2aa2b03b9569803e1a61a28a6683c3800a"
@@ -8405,10 +8392,10 @@ react-native-navigation@*:
     react-lifecycles-compat "2.0.0"
     tslib "1.9.3"
 
-react-native-navigation@2.13.1:
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.13.1.tgz#1aefe56a8b92541f110120d2aa079c8c0cdc7213"
-  integrity sha512-hKjPxKP3rM2OqZek7JVflol8+btrKaQ6hHXkD43L86n6r+rrTx7g6ltjSCyci6a7p5xHh3q8kI09SmL3ONdWkQ==
+react-native-navigation@2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-2.21.0.tgz#e35aa0934852d3423527da0452c2080566ff4666"
+  integrity sha512-6dmwx89OuQrjDXbc4RBT5iHkO50pWBdecFPozmMxWE+RrurjCtkKhEHBuYDPL9bEwrnmpnoAiIp/FaTqrq3p4Q==
   dependencies:
     hoist-non-react-statics "3.x.x"
     lodash "4.17.x"
@@ -8465,10 +8452,10 @@ react-native-video@^4.4.1:
     prop-types "^15.5.10"
     shaka-player "^2.4.4"
 
-react-native@0.59.0-rc.3:
-  version "0.59.0-rc.3"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.59.0-rc.3.tgz#a989e4cdab596bb62248c26920fb641b210fd60e"
-  integrity sha512-jMH/5VUaajBXADmBlDyNQ9gYDU3ywXRQTdVMFBLPcPwT+xJzF1HuUo/xEpAQ6G+mjia3G70BQpEgxi55berviw==
+react-native@0.59.8:
+  version "0.59.8"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.59.8.tgz#ade4141c777c60f5ec4889d9811d0f80a9d56547"
+  integrity sha512-x1T+/pEXrjgdH9uDzd5doJy5aFlBqW04j7ljDKIGALchhnvdFbtXXrUZ/1PfWHMrIdZxtaDt4tkSttp662GSQA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@react-native-community/cli" "^1.2.1"

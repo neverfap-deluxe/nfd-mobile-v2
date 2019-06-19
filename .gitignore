@@ -51,6 +51,8 @@ buck-out/
 \.buckd/
 *.keystore
 
+android/app/*.keystore
+
 # fastlane
 */fastlane/report.xml
 */fastlane/Preview.html

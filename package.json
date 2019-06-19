@@ -1,11 +1,12 @@
 {
   "name": "NfdMob",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "build:env": "sh ./scripts/build-env.sh",
     "build:e2e:ios": "detox build --configuration ios.sim.release",
     "build:e2e:android": "detox build --configuration android.emu.release",
+
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "rename": "sh ./scripts/rename.sh",
     "podspec": "sh ./scripts/podspec.sh",
@@ -18,9 +19,15 @@
     "tslint": "tsc -p . --noEmit --skipLibCheck; tslint --fix 'src/**/*.{ts,tsx}' -p .",
     "stylelint": "stylelint 'src/**/*.scss' --syntax scss",
     "prepare": "patch-package && if [ -f ./scripts/postinstall.sh ]; then sh ./scripts/postinstall.sh; fi",
+
     "g": "node util/generateApi.js && node util/generateContent.js",
     "ga": "node util/generateApi.js",
-    "gc": "node util/generateContent.js"
+    "gc": "node util/generateContent.js",
+
+    "postinstall": "sed -i.bak -e 's/design:26.1.0/design:28.0.0/g' ./node_modules/react-native-navigation/lib/android/app/build.gradle && sed -i.bak -e 's/targetSdkVersion 25/targetSdkVersion 28/g' ./node_modules/react-native-navigation/lib/android/app/build.gradle && sed -i.bak -e 's/compileSdkVersion 26/compileSdkVersion 28/g' ./node_modules/react-native-navigation/lib/android/app/build.gradle && sed -i.bak -e \"s/buildToolsVersion '27.0.3'/buildToolsVersion '28.0.3'/g\" ./node_modules/react-native-navigation/lib/android/app/build.gradle",
+    "android-debug": "cd ./android && ./gradlew clean && ./gradlew app:assembleDebug && ./gradlew installDebug",
+    "android-apk": "cd ./android && ./gradlew clean && ./gradlew app:assembleRelease",
+    "android": "cd ./android && ./gradlew clean && ./gradlew app:bundleRelease"
   },
   "contributors": [
     "Jérémy Barbet <jeremgraph@gmail.com>",
@@ -52,11 +59,10 @@
     "mobx-state-tree": "3.11.0",
     "react": "16.8.4",
     "react-apollo": "^2.5.5",
-    "react-native": "0.59.0-rc.3",
+    "react-native": "0.59.8",
     "react-native-code-push": "5.5.2",
     "react-native-config": "0.11.7",
-    "react-native-firebase": "5.2.3",
-    "react-native-navigation": "2.13.1",
+    "react-native-navigation": "2.21.0",
     "react-native-sentry": "0.42.0",
     "react-native-slider": "^0.11.0",
     "react-native-ueno-css-modules": "1.1.0",
@@ -159,7 +165,7 @@
       },
       "android.emu.release": {
         "binaryPath": "android/app/build/outputs/apk/release/app-release.apk",
-        "build": "pushd android && ./gradlew assembleRelease assembleAndroidTest -DtestBuildType=release && popd",
+        "build": "pushd android && ./gradlew app:assembleRelease assembleAndroidTest -DtestBuildType=release && popd",
         "type": "android.emulator",
         "name": "Pixel_2_API_28"
       }

@@ -3,6 +3,26 @@
 
 # NfdMob
 
+<!-- Check this for why it's crashing on android -->
+https://github.com/rodrigodemacedo/react-native-new-projects/issues/1 - do this first
+https://medium.com/@impaachu/react-native-android-release-build-crash-on-device-14f2c9eacf18
+
+
+yo rn-toolbox:assets --icon util/icons/logo.png
+
+
+removed:
+    "react-native-firebase": "5.2.3",
+
+
+code-push access-key add julius.reade/NeverFap-Deluxe
+
+appcenter codepush release-react -a julius.reade/NeverFap-Deluxe -d Staging
+
+// get keys
+code-push deployment ls julius.reade/NeverFap-Deluxe -k
+
+
 See [react-native-starter docs](https://ueno-llc.github.io/react-native-starter/)
 
 ## Development
@@ -10,6 +30,7 @@ See [react-native-starter docs](https://ueno-llc.github.io/react-native-starter/
 ```bash
 yarn start & react-native run-ios
 ```
+
 
 // REACT NATIVE VIDEO
 

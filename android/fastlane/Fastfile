@@ -16,7 +16,7 @@ platform :android do
   desc "Build Release"
   lane :build_release do
     gradle(
-      task: "assembleRelease"
+      task: "app:assembleRelease"
     )
   end
 

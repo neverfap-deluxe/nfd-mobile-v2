@@ -15,7 +15,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <CodePush/CodePush.h>
-#import <Firebase.h>
+// #import <Firebase.h>
 
 @implementation AppDelegate
 
@@ -23,12 +23,12 @@
 {
   [RNSentry installWithBridge:[ReactNativeNavigation getBridge]];
 
-  if ([[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GoogleService-Info" ofType:@"plist"]] objectForKey:@"GOOGLE_APP_ID"]) {
-    [FIRApp configure];
-    NSLog(@"Firebase initialized");
-  } else {
-    NSLog(@"Warning: Invalid GoogleService-Info.plist. Get one from the Firebase Console.");
-  }
+  // if ([[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GoogleService-Info" ofType:@"plist"]] objectForKey:@"GOOGLE_APP_ID"]) {
+  //   [FIRApp configure];
+  //   NSLog(@"Firebase initialized");
+  // } else {
+  //   NSLog(@"Warning: Invalid GoogleService-Info.plist. Get one from the Firebase Console.");
+  // }
 
   NSURL *jsCodeLocation;
 

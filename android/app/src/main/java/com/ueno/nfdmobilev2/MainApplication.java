@@ -21,8 +21,8 @@ import com.reactnativenavigation.react.ReactGateway;
 // Ueno RNS: Include Libraries here
 import com.microsoft.codepush.react.CodePush;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
-import io.invertase.firebase.RNFirebasePackage;
-import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
+// import io.invertase.firebase.RNFirebasePackage;
+// import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
 import io.sentry.RNSentryPackage;
 import com.apsl.versionnumber.RNVersionNumberPackage;
 
@@ -56,8 +56,10 @@ public class MainApplication extends NavigationApplication {
           new ReactNativeConfigPackage(),
           new RNVersionNumberPackage(),
           new RNSentryPackage(),
-          new RNFirebasePackage(),
-          new RNFirebaseAnalyticsPackage()
+          new ReactVideoPackage()
+
+        //   new RNFirebasePackage(),
+        //   new RNFirebaseAnalyticsPackage()
         );
     }
 

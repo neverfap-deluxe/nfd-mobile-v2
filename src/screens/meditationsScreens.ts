@@ -1,10 +1,12 @@
 
-  import { EP1ObserveWhatYouSee, } from '../content/meditations/index.tsx'
+  import { EP1ObserveYourSenses,EP0ObserveYourSensespilot, } from '../content/meditations/index.tsx'
   const MeditationsScreens = new Map();
 
-  export const EP1OBSERVEWHATYOUSEE_SCREEN = 'navigation.EP1ObserveWhatYouSeeScreen';
+  export const EP1OBSERVEYOURSENSES_SCREEN = 'navigation.EP1ObserveYourSensesScreen';
+export const EP0OBSERVEYOURSENSESPILOT_SCREEN = 'navigation.EP0ObserveYourSensespilotScreen';
 
-  MeditationsScreens.set(EP1OBSERVEWHATYOUSEE_SCREEN, EP1ObserveWhatYouSee);
+  MeditationsScreens.set(EP1OBSERVEYOURSENSES_SCREEN, EP1ObserveYourSenses);
+MeditationsScreens.set(EP0OBSERVEYOURSENSESPILOT_SCREEN, EP0ObserveYourSensespilot);
 
   export default MeditationsScreens;
 

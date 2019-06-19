@@ -54,7 +54,8 @@ export const Item = styled.View`
   background: white;
   border: 4px solid rgba(255, 46, 182, 1);
   box-shadow: -5px 5px 0px rgba(0, 255, 255, 1);
-  color: black;
+  elevation: 2;
+  color: #212121;
   transition: shadow-offset 0.2s, border-bottom 0.1s;
 
   margin-bottom: 16px;
@@ -64,7 +65,7 @@ export const ItemTitle = styled.Text`
   width: ${Dimensions.get('window').width * 0.7};
   font-size: 20px;
   line-height: 24px;
-  color: black;
+  color: #212121;
 `;
 
 export const ItemDate = styled.Text`
@@ -72,7 +73,7 @@ export const ItemDate = styled.Text`
 
   font-size: 14px;
   line-height: 22px;
-  color: black;
+  color: #212121;
 `;
 
 export const TopBar = styled.View`

@@ -21,7 +21,17 @@ export const HomeScreen = ({ componentId }: any) => {
       <Query query={HOMEPAGE}>
         {({ loading, error, data }) => {
           if (loading) return <LoadingScreen />;
-          if (error) return <Text>Error! ${error.message}</Text>;
+          if (error) return (
+            <ScrollView>
+              <Container>
+                <TopBarMain />
+
+                <PageTitle>NeverFap Deluxe</PageTitle>
+
+                <HomeContent componentId={componentId} />
+              </Container>
+            </ScrollView>
+          );
 
           return (
             <ScrollView>
@@ -29,7 +39,6 @@ export const HomeScreen = ({ componentId }: any) => {
                 <TopBarMain/>
 
                 <PageTitle>NeverFap Deluxe</PageTitle>
-                {/* <Text style={css`font-size: 24px; margin-top: 6px; margin-bottom: 6px;`}>Daddy Reade is here to help, baby.</Text> */}
 
                 <HomeStats
                   getDbUsersStats={data.getDbUsersStats}

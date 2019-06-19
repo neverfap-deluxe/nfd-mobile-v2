@@ -74,12 +74,12 @@ const saveListApiOther = async () => {
     ];
 
     const links = [
-      {
-        title: "About",
-        description: "About NeverFap Deluxe",
-        content: "Learn",
-        url: null,
-      },
+      // {
+      //   title: "About",
+      //   description: "About NeverFap Deluxe",
+      //   content: "Learn",
+      //   url: null,
+      // },
       {
         title: "Twitter",
         description: "Follow NeverFap Deluxe on Twitter!",
@@ -105,10 +105,16 @@ const saveListApiOther = async () => {
         url: "https://patreon.com/neverfapdeluxe",
       },
       {
+        title: "YouTube",
+        description: "NeverFap Deluxe YouTube Channel",
+        content: "NeverFap Deluxe YouTube Channel",
+        url: "https://www.youtube.com/channel/UCHiMNZ86_zwW1RebKDcZEoQ",
+      },
+      {
         title: "Website",
         description: "NeverFap Deluxe Website",
         content: "Learn",
-        url: "https://juliusreade.com/",
+        url: "https://neverfapdeluxe.com/",
       },
     ];
 

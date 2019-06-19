@@ -3594,4 +3594,99 @@ export const TheImportanceOfLettingGo = ({ componentId }: any) => {
   );
 }
 
-export default { IntroductionToTheNeverFapDeluxeGuide,MyPersonalPornRecoveryJourney,TheFiveFundamentalPrinciplesOfNeverFap,TheOneRuleOfNeverFap,WhyamIAPornAddict,WhatMakesNeverFapSoDifferent,PayingTheNeverFapMaintenanceTax,TheImportanceOfMeditationForPornAddiction,EverythingIsAChoice,TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife,YouAlwaysHaveTimeForYourMentalHealth,CreatingYourFirstNeverFapSchedule,TheNeverFapStateOfMind,YourPornAddictionIsNotWhoYouAre,TheEasiestWayToIdentifyAJudgement,TheUltimateAimOfNeverFapDeluxePractices,WhyYouShouldNeverDependOnYourEmotions,TheBiggestJudgementPornAddictsMake,TheEasiestWayToNotTakeOurEmotionsPersonally,WhatItFeelsLikeNotToBeAddictedToPorn,WhatToDoWhenYoureIntenselyCravingPorn,WhatIsNeverFapDeluxe,IsItOkayToOrgasmIfYouHaveAPornAddiction,TheImportanceOfLettingGo, } 
+export const TheTrickIsToRealiseThatNothingIsImportant = ({ componentId }: any) => {
+  return (
+    <ScrollView>
+      <ContentContainer>
+        <Text style={content__title}>The Trick Is To Realise That Nothing Is Important</Text>
+        <Text style={content__date}>2019-06-02</Text>
+        <Text style={p}>I just thought I&rsquo;d take the time today to share a cool trick I&rsquo;d learnt over the years in regards to helping people overcoming difficult situations.</Text>
+
+<Text style={p}>An important thing to note about difficult situations, is that often it isn&rsquo;t even the situations themselves which make them difficult.</Text>
+
+<Text style={p}>Often, it&rsquo;s our own inability to respond to these situations, which makes them inherently difficult.</Text>
+
+<Text style={p}>Either we become too anxious, we find ourselves trapped in fear or we act in a way that is counter-productive without truly realising or understanding why.</Text>
+
+<View style={hr3}/>
+
+<Text style={h3}>Which is to say that more often than not, the problem is us.</Text>
+
+<View style={hr3__bottom}/>
+
+
+<Text style={p}>This is in part due to the self-limiting beliefs we may have about ourselves, as well as what responding effectively might entail.</Text>
+
+<Text style={p}>In particular, a lot this ineffectiveness stems from our fear of letting go or the consequences of what might happen if we were to let go of these self-limiting beliefs.</Text>
+
+<Text style={p}>Which ironically leads to self-destructive behaviours since self-perceived fear in no way conveys any indication of safe behaviours moving forward, only behaviours to avoid.</Text>
+
+<Text style={p}>Which usually prevents us from proceeding with those helpful actions we were aiming for to begin with.</Text>
+
+<Text style={p}>Certainly, while self-limiting beliefs aren&rsquo;t something which can be dismantled overnight, there&rsquo;s a certain mindset which I find helps deal with these situations.</Text>
+
+<View style={hr3}/>
+
+<Text style={h3}>In particular, the trick is to realise that nothing is important.</Text>
+
+<View style={hr3__bottom}/>
+
+
+<Text style={p}>In essence, by learning to treat everything as unimportant, we can learn to dissasociate ourselves from these self-limiting beliefs, and instead just go with the flow.</Text>
+
+<Text style={p}>In other words, this is an exercise in distrusting ourselves.</Text>
+
+<Text style={p}>Now, although it may seem like reckless advice, it&rsquo;s actually incredibly sound when you get into the logic of how this mindset interacts with the way we think about our ego.</Text>
+
+<Text style={p}>When you make the statement &ldquo;nothing is important&rdquo; you&rsquo;re actually making a very essential claim about yourself and the situation.</Text>
+
+<View style={hr3}/>
+
+<Text style={h3}>In particular, that nothing is ever important enough to self-harm or do harm.</Text>
+
+<View style={hr3__bottom}/>
+
+
+<Text style={p}>You see, you&rsquo;re not preventing anything positive here by learning to let go and assume everything is unimportant - primarily because there was nothing positive to begin with.</Text>
+
+<Text style={p}>If all you know is self-destructive behaviours, which in most cases is true, then detaching from them certainly isn&rsquo;t a negative thing.</Text>
+
+<Text style={p}>Oh, but what if there are some constructive behaviuors in the mix, you might say?</Text>
+
+<Text style={p}>Well, that&rsquo;s also irrelevant because in actual fact, what we are doing here is much more profound than that promoting certain behaviours.</Text>
+
+<Text style={p}>Instead, what we are doing is learning to calm down and get ourselves to a point of non-reaction.</Text>
+
+<Text style={p}>You see, the problem in most cases when we&rsquo;re irrational or feeling compulsive is that we develop this desire to react in some way.</Text>
+
+<Text style={p}>In a lot of cases it&rsquo;s instinctual.</Text>
+
+<Text style={p}>We feel awful. We feel obliged to do something about it, only to end up relapsing or doing something harmful like eat an entire bag of chips.</Text>
+
+<View style={hr3}/>
+
+<Text style={h3}>However what people don't realise is that in 90% of cases, the correct thing to do is not react.</Text>
+
+<View style={hr3__bottom}/>
+
+
+<Text style={p}>In fact, that&rsquo;s part of the core tennant of what NeverFap Deluxe is all about, learning to remain calm and composed inspite of what you&rsquo;re feeling.</Text>
+
+<Text style={p}>To go into more detail, essentially 5% of our time should be spent practicing awareness via meditation, while the other 95% of our time should be spent remaining calm.</Text>
+
+<Text style={p}>Furthermore, the sooner you realise that you have no obligation to react, the sooner you&rsquo;ll be able to act more effectively out of principle.</Text>
+
+<Text style={p}>Another key thing to note about obligation is that it&rsquo;s merely a feeling.</Text>
+
+<Text style={p}>And by understanding that nothing is important, we can directly challenge this feeling in a way that bypasses it entirely.</Text>
+
+<Text style={p}>The sooner you learn to dismantle your ego and your thoughts, the quicker you&rsquo;ll be able to help yourself in a more constructive way.</Text>
+
+<Text style={p}>In particular, by remaining in control.</Text>
+
+      </ContentContainer>
+    </ScrollView>
+  );
+}
+
+export default { IntroductionToTheNeverFapDeluxeGuide,MyPersonalPornRecoveryJourney,TheFiveFundamentalPrinciplesOfNeverFap,TheOneRuleOfNeverFap,WhyamIAPornAddict,WhatMakesNeverFapSoDifferent,PayingTheNeverFapMaintenanceTax,TheImportanceOfMeditationForPornAddiction,EverythingIsAChoice,TheFivePrinciplesOfNeverFapAsTheyRelateToMyLife,YouAlwaysHaveTimeForYourMentalHealth,CreatingYourFirstNeverFapSchedule,TheNeverFapStateOfMind,YourPornAddictionIsNotWhoYouAre,TheEasiestWayToIdentifyAJudgement,TheUltimateAimOfNeverFapDeluxePractices,WhyYouShouldNeverDependOnYourEmotions,TheBiggestJudgementPornAddictsMake,TheEasiestWayToNotTakeOurEmotionsPersonally,WhatItFeelsLikeNotToBeAddictedToPorn,WhatToDoWhenYoureIntenselyCravingPorn,WhatIsNeverFapDeluxe,IsItOkayToOrgasmIfYouHaveAPornAddiction,TheImportanceOfLettingGo,TheTrickIsToRealiseThatNothingIsImportant, } 

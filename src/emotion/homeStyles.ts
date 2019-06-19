@@ -19,11 +19,13 @@ export const homepage__stat__block = css`
 export const homepage__stat__title = css`
   width: ${Dimensions.get('window').width * 0.2};
   text-align: center;
+  color: #212121;
 `;
 
 export const homepage__stat__number = css`
   width: ${Dimensions.get('window').width * 0.2};
   font-size: 18px;
+  color: #212121;
 `;
 
 export const homepage__join__button = css`

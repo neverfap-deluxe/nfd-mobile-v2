@@ -55,10 +55,10 @@ export const topBar = (titleArg: string, subtitleArg: string) => ({
     testID: 'topBar',
     ...title(titleArg),
     ...subtitle(subtitleArg),
-    backButton: {
-      visible: true,
+    // backButton: { // this is off, because I think it affects android
+    //   visible: true,
       // icon: require('icon.png'),
-    },
+    // },
     // background: {
     //   color: '#00ff00',
     //   component: {

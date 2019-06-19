@@ -8,7 +8,7 @@ const capitalize = (s) => {
 };
 
 const saveList = (items, type, number) => {
-  const finalItems = number ? _.take(items, number) : items;
+  const finalItems = number ? _.reverse(_.take(items, number)) : items;
   const itemsComplete = `const items = ${JSON.stringify(_.reverse(finalItems))}\nexport default items`;
 
   if (number) {
